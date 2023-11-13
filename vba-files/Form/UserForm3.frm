@@ -17,15 +17,15 @@ Private Sub CommandButton1_Click()
     ObtenerYColocarTabsUnabFlex
 End Sub
 
-Private Sub Label1_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+Private Sub Image2_Click()
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label1.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label1.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarShifts
@@ -34,18 +34,151 @@ Private Sub Label1_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Columns("A:B").AutoFit
+End Sub
+
+Private Sub Image3_Click()
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
+    Label2.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
+    Dim StartTime As Double
+    StartTime = Timer ' Guarda el tiempo de inicio
+    
+    Do
+        DoEvents ' Permite que otros eventos se procesen
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
+    
+    Label2.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
+    ActualizarPercentageTAB
+    Dim wsRegistro As Worksheet
+    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+    Dim lastRow As Long
+    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+    wsRegistro.Cells(lastRow, 1).Value = Now
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
+    wsRegistro.Columns("A:B").AutoFit
+End Sub
+
+Private Sub Image4_Click()
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
+    Label3.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
+    Dim StartTime As Double
+    StartTime = Timer ' Guarda el tiempo de inicio
+    
+    Do
+        DoEvents ' Permite que otros eventos se procesen
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
+    
+    Label3.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
+    ActualizarTABRateCalc
+    Dim wsRegistro As Worksheet
+    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+    Dim lastRow As Long
+    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+    wsRegistro.Cells(lastRow, 1).Value = Now
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
+    wsRegistro.Columns("A:B").AutoFit
+End Sub
+
+Private Sub Image5_Click()
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
+    Label5.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
+    Dim StartTime As Double
+    StartTime = Timer ' Guarda el tiempo de inicio
+    
+    Do
+        DoEvents ' Permite que otros eventos se procesen
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
+    
+    Label5.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
+    RealizarOperaciones
+    Dim wsRegistro As Worksheet
+    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+    Dim lastRow As Long
+    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+    wsRegistro.Cells(lastRow, 1).Value = Now
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Income Statement en BU_Scenario_Flexline"
+    wsRegistro.Columns("A:B").AutoFit
+End Sub
+
+Private Sub Image6_Click()
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
+    Label4.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
+    Dim StartTime As Double
+    StartTime = Timer ' Guarda el tiempo de inicio
+    
+    Do
+        DoEvents ' Permite que otros eventos se procesen
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
+    
+    Label4.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
+    ObtenerYColocarTotalFlexline
+    Dim wsRegistro As Worksheet
+    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+    Dim lastRow As Long
+    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+    wsRegistro.Cells(lastRow, 1).Value = Now
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
+    wsRegistro.Columns("A:B").AutoFit
+End Sub
+
+
+Private Sub Image7_Click()
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
+    Label6.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
+    Dim StartTime As Double
+    StartTime = Timer ' Guarda el tiempo de inicio
+    
+    Do
+        DoEvents ' Permite que otros eventos se procesen
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
+    
+    Label6.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
+    ObtenerYColocarWCStaffFormat
+    
+    ' Registrar la acciï¿½n en la hoja de registro
+    Dim wsRegistro As Worksheet
+    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+    Dim lastRow As Long
+    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+    wsRegistro.Cells(lastRow, 1).Value = Now
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Columns("A:B").AutoFit
+End Sub
+
+Private Sub Image8_Click()
+        UserForm1.Show
+End Sub
+
+Private Sub Label1_Click()
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
+    Label1.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
+    Dim StartTime As Double
+    StartTime = Timer ' Guarda el tiempo de inicio
+    
+    Do
+        DoEvents ' Permite que otros eventos se procesen
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
+    
+    Label1.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
+    ObtenerYColocarShifts
+    Dim wsRegistro As Worksheet
+    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+    Dim lastRow As Long
+    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+    wsRegistro.Cells(lastRow, 1).Value = Now
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label7_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label1.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label1.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarShifts
@@ -54,18 +187,18 @@ Private Sub Label7_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label8_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label1.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label1.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarShifts
@@ -74,19 +207,19 @@ Private Sub Label8_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
 Private Sub Label2_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label2.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label2.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ActualizarPercentageTAB
@@ -95,18 +228,18 @@ Private Sub Label2_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label9_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label2.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label2.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ActualizarPercentageTAB
@@ -115,18 +248,18 @@ Private Sub Label9_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label10_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label2.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label2.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ActualizarPercentageTAB
@@ -135,19 +268,19 @@ Private Sub Label10_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
 Private Sub Label3_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label3.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label3.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ActualizarTABRateCalc
@@ -156,18 +289,18 @@ Private Sub Label3_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label12_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label3.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label3.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ActualizarTABRateCalc
@@ -176,18 +309,18 @@ Private Sub Label12_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label11_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label3.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label3.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ActualizarTABRateCalc
@@ -196,19 +329,19 @@ Private Sub Label11_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
 Private Sub Label5_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label5.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label5.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     RealizarOperaciones
@@ -217,18 +350,18 @@ Private Sub Label5_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Income Statement en BU_Scenario_Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Income Statement en BU_Scenario_Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label14_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label5.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label5.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     RealizarOperaciones
@@ -237,18 +370,18 @@ Private Sub Label14_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Income Statement en BU_Scenario_Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Income Statement en BU_Scenario_Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label13_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label5.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label5.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     RealizarOperaciones
@@ -257,19 +390,19 @@ Private Sub Label13_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Income Statement en BU_Scenario_Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Income Statement en BU_Scenario_Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
 Private Sub Label4_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label4.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label4.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarTotalFlexline
@@ -278,18 +411,18 @@ Private Sub Label4_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label16_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label4.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label4.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarTotalFlexline
@@ -298,18 +431,18 @@ Private Sub Label16_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label15_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label4.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label4.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarTotalFlexline
@@ -318,53 +451,42 @@ Private Sub Label15_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
 Private Sub Label6_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label6.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label6.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarWCStaffFormat
     
-    ' Registrar la acción en la hoja de registro
+    ' Registrar la acciï¿½n en la hoja de registro
     Dim wsRegistro As Worksheet
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
-    ' Ocultar todas las columnas que no contienen registros
-    Dim allColumns As Range
-    Set allColumns = wsRegistro.UsedRange.EntireColumn
-    Dim column As Range
-    
-    For Each column In allColumns
-        If Application.WorksheetFunction.CountA(column) = 0 Then
-            column.Hidden = True
-        Else
-            column.Hidden = False
-        End If
-    Next column
 End Sub
+
 Private Sub Label18_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label6.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label6.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarWCStaffFormat
@@ -373,30 +495,23 @@ Private Sub Label18_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
     ' Ocultar todas las columnas que no contienen registros
     Dim allColumns As Range
     Set allColumns = wsRegistro.UsedRange.EntireColumn
     Dim column As Range
-    
-    For Each column In allColumns
-        If Application.WorksheetFunction.CountA(column) = 0 Then
-            column.Hidden = True
-        Else
-            column.Hidden = False
-        End If
-    Next column
 End Sub
+
 Private Sub Label17_Click()
-    ' Cambia el color de fondo del Label al hacer clic en él
+    ' Cambia el color de fondo del Label al hacer clic en ï¿½l
     Label6.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
     Dim StartTime As Double
     StartTime = Timer ' Guarda el tiempo de inicio
     
     Do
         DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta según sea necesario)
+    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta segï¿½n sea necesario)
     
     Label6.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
     ObtenerYColocarWCStaffFormat
@@ -405,7 +520,7 @@ Private Sub Label17_Click()
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
     wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acción realizada en WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 

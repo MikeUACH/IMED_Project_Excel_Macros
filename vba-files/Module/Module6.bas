@@ -81,11 +81,11 @@ Sub ActualizarTABRateCalc()
     ' archivoOrigen.Close SaveChanges:=False
 
     ' Coloca los valores obtenidos en celdas específicas de tu hoja de cálculo principal
-    For i = 1 To 7 ' Cambia el límite para i a 6
+    For I = 1 To 7 ' Cambia el límite para i a 6
         For j = 1 To 4 ' Cambia el límite para j a 4
-            ArchivoDestino.Sheets("Rate Calculation").Cells(i + 2, j + 31).Value = valores(i, j)
+            ArchivoDestino.Sheets("Rate Calculation").Cells(I + 2, j + 31).Value = valores(I, j)
         Next j
-    Next i
+    Next I
     archivoOrigen.Close SaveChanges:=False
 End Sub
 
