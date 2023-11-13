@@ -13,6 +13,8 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
+
 Private Sub CommandButton1_Click()
     ObtenerYColocarTabsUnabFlex
 End Sub
@@ -523,4 +525,3 @@ Private Sub Label17_Click()
     wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
-
