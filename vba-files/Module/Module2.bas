@@ -38,7 +38,7 @@ Sub ObtenerYColocarTotalFlexline()
     TotalFlexline = hojaOrigen.Range("D59:O69")
     
     ' Coloca los valores obtenidos en celdas específicas de tu hoja de cálculo principal
-    ArchivoDestino.Sheets("Non Mat Margin").Range("D168:O178").Value = TotalFlexline
+    ArchivoDestino.Sheets("Non Mat Margin").Range("D168:O178").value = TotalFlexline
     archivoOrigen.Close SaveChanges:=False
 End Sub
 

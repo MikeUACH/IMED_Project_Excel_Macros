@@ -57,13 +57,13 @@ Sub ObtenerYColocarTabsUnabFlex()
     AllocationTotal = hojaOrigen.Range("D86:O96")
     
     ' Coloca los valores obtenidos en celdas espec�ficas de tu hoja de c�lculo principal
-    hojaDestino.Range("Z3:AK12").Value = TotalFlexlineBID2
-    hojaDestino.Range("Z17:AK26").Value = AllocationUCBID2
-    hojaDestino.Range("Z31:AK40").Value = AllocationTotalBID2
+    hojaDestino.Range("Z3:AK12").value = TotalFlexlineBID2
+    hojaDestino.Range("Z17:AK26").value = AllocationUCBID2
+    hojaDestino.Range("Z31:AK40").value = AllocationTotalBID2
     ' Coloca los valores obtenidos en celdas espec�ficas de tu hoja de c�lculo principal
-    hojaDestino.Range("D3:O12").Value = TotalFlexline
-    hojaDestino.Range("D17:O26").Value = AllocationUC
-    hojaDestino.Range("D31:O40").Value = AllocationTotal
+    hojaDestino.Range("D3:O12").value = TotalFlexline
+    hojaDestino.Range("D17:O26").value = AllocationUC
+    hojaDestino.Range("D31:O40").value = AllocationTotal
     
     archivoOrigen.Close SaveChanges:=False
 End Sub

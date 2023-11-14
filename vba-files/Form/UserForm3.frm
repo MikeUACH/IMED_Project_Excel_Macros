@@ -35,8 +35,8 @@ Private Sub Image2_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -56,8 +56,8 @@ Private Sub Image3_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -77,8 +77,8 @@ Private Sub Image4_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -98,8 +98,8 @@ Private Sub Image5_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Income Statement en BU_Scenario_Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Income Statement en BU_Scenario_Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -119,8 +119,8 @@ Private Sub Image6_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -143,12 +143,12 @@ Private Sub Image7_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
-
 Private Sub Image8_Click()
+        Unload Me
         UserForm1.Show
 End Sub
 
@@ -168,8 +168,8 @@ Private Sub Label1_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label7_Click()
@@ -188,8 +188,8 @@ Private Sub Label7_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label8_Click()
@@ -208,8 +208,8 @@ Private Sub Label8_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Shift Tabs WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -229,8 +229,8 @@ Private Sub Label2_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label9_Click()
@@ -249,8 +249,8 @@ Private Sub Label9_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label10_Click()
@@ -269,8 +269,8 @@ Private Sub Label10_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Percentage tabs en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -290,8 +290,8 @@ Private Sub Label3_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label12_Click()
@@ -310,8 +310,8 @@ Private Sub Label12_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label11_Click()
@@ -330,8 +330,8 @@ Private Sub Label11_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Rate Calculation en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -351,8 +351,8 @@ Private Sub Label5_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Income Statement en BU_Scenario_Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Income Statement en BU_Scenario_Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label14_Click()
@@ -371,8 +371,8 @@ Private Sub Label14_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Income Statement en BU_Scenario_Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Income Statement en BU_Scenario_Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label13_Click()
@@ -391,8 +391,8 @@ Private Sub Label13_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Income Statement en BU_Scenario_Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Income Statement en BU_Scenario_Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -412,8 +412,8 @@ Private Sub Label4_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label16_Click()
@@ -432,8 +432,8 @@ Private Sub Label16_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 Private Sub Label15_Click()
@@ -452,8 +452,8 @@ Private Sub Label15_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en Non Mat Margin en Unabsorbed- Flexline Calculation"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -475,8 +475,8 @@ Private Sub Label6_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
 
@@ -496,8 +496,8 @@ Private Sub Label18_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
     ' Ocultar todas las columnas que no contienen registros
     Dim allColumns As Range
@@ -521,7 +521,7 @@ Private Sub Label17_Click()
     Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
     Dim lastRow As Long
     lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
+    wsRegistro.Cells(lastRow, 1).value = Now
+    wsRegistro.Cells(lastRow, 2).value = "Acci�n realizada en WCStaff Format en BU Scenario Flexline"
     wsRegistro.Columns("A:B").AutoFit
 End Sub
