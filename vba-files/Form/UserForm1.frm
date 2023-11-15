@@ -14,7 +14,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub UserForm1_Initialize()
-    txtOrigenSTFW.Text = RangoHojaOrigen()
+    Me.txtOrigenSTFW.Value = "A pto"
 End Sub
 
 Private Sub CommandButton25_Click()
