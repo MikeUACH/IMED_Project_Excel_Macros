@@ -55,7 +55,7 @@ Sub ObtenerYColocarWCStaffFormat()
         Set rangoDatos = hojaOrigen.Range("A" & filaInicio + 1 & ":AL" & filaInicio + 13)
         
         ' Copiar los datos al archivo de trabajo actual (ajusta el rango de destino según tus necesidades)
-        ArchivoDestino.Sheets("WCStaff Format").Range("B3").Resize(13, 33).value = rangoDatos.value
+        ArchivoDestino.Sheets("WCStaff Format").Range("B3").Resize(13, 33).Value = rangoDatos.Value
     Else
         MsgBox "La palabra 'NUEVO Forecast' no se encontró en la tabla.", vbExclamation
     End If

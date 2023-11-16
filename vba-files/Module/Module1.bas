@@ -3,7 +3,7 @@ Dim ArchivoDestinoPath As String ' Variable global para almacenar la ruta del ar
 Dim archivoOrigenPath As String
 
 Public RangoHojaOrigen() As String ' Variable para almacenar los rangos de la hoja de origen
-Dim RangoHojaDestino As String ' Variable para almacenar el rango de la hoja de destino
+Public RangoHojaDestino As String ' Variable para almacenar el rango de la hoja de destino
 
 Sub ObtenerYColocarShifts()
     Dim ArchivoDestino As Workbook
@@ -11,6 +11,7 @@ Sub ObtenerYColocarShifts()
     Dim hojaOrigen As Worksheet
     Dim turno As Integer
     
+    archivoOrigenPath = "C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\NUEVOS\08 DL Breakdown FY24 Q1 BID 4 Rev F.xlsx"
     ' Verifica si ya se ha seleccionado un archivo de origen previamente
     If archivoOrigenPath = "" Then
         archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo de origen (DL Breakdown)")
@@ -21,7 +22,7 @@ Sub ObtenerYColocarShifts()
     
     ' Verifica si ya se ha seleccionado un archivo de destino previamente
     If ArchivoDestinoPath = "" Then
-        ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo de destino (BU Scenario Flexline)")
+        ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo de destino (BU Scenario Flexline)")
         If ArchivoDestinoPath = "Falso" Then
             Exit Sub
         End If
@@ -51,10 +52,10 @@ Sub ObtenerYColocarShifts()
         RangoHojaOrigen(turno) = hojaOrigen.Range("S" & (45 + ((turno - 1) * 41)) & ":AD" & (81 + ((turno - 1) * 41))).Address
         
         ' Definir el rango de la hoja de destino
-        RangoHojaDestino = ArchivoDestino.Sheets("WCStaff Format").Range("S" & (45 + ((turno - 1) * 41)) & ":AD" & (81 + ((turno - 1) * 41))).Address
+        RangoHojaDestino = ArchivoDestino.Sheets("Sheet1").Range("S" & (45 + ((turno - 1) * 41)) & ":AD" & (81 + ((turno - 1) * 41))).Address
         
         ' Asignar valores desde la hoja de origen a la hoja de destino
-        ArchivoDestino.Sheets("WCStaff Format").Range(RangoHojaDestino).value = hojaOrigen.Range(RangoHojaOrigen(turno)).value
+        ArchivoDestino.Sheets("Sheet1").Range(RangoHojaDestino).Value = hojaOrigen.Range(RangoHojaOrigen(turno)).Value
     Next turno
     
     ' Cerrar el archivo de origen sin guardar cambios

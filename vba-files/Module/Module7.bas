@@ -92,22 +92,22 @@ Sub ActualizarPercentageTAB()
     
     
     ' Coloca los valores obtenidos en celdas espec�ficas de tu hoja de c�lculo principal
-    ArchivoDestino.Sheets("Percentage").Range("D3").value = trimestre1
-    ArchivoDestino.Sheets("Percentage").Range("D25").value = trimestre2
-    ArchivoDestino.Sheets("Percentage").Range("D47").value = trimestre3
-    ArchivoDestino.Sheets("Percentage").Range("D69").value = trimestre4
+    ArchivoDestino.Sheets("Percentage").Range("D3").Value = trimestre1
+    ArchivoDestino.Sheets("Percentage").Range("D25").Value = trimestre2
+    ArchivoDestino.Sheets("Percentage").Range("D47").Value = trimestre3
+    ArchivoDestino.Sheets("Percentage").Range("D69").Value = trimestre4
     
     ' Coloca los valores obtenidos en celdas espec�ficas de tu hoja de c�lculo principal
-    ArchivoDestino.Sheets("Percentage").Range("D5").value = trimestreWCStaff1
-    ArchivoDestino.Sheets("Percentage").Range("D27").value = trimestreWCStaff2
-    ArchivoDestino.Sheets("Percentage").Range("D49").value = trimestreWCStaff3
-    ArchivoDestino.Sheets("Percentage").Range("D71").value = trimestreWCStaff4
+    ArchivoDestino.Sheets("Percentage").Range("D5").Value = trimestreWCStaff1
+    ArchivoDestino.Sheets("Percentage").Range("D27").Value = trimestreWCStaff2
+    ArchivoDestino.Sheets("Percentage").Range("D49").Value = trimestreWCStaff3
+    ArchivoDestino.Sheets("Percentage").Range("D71").Value = trimestreWCStaff4
     
     ' Coloca los valores obtenidos en celdas espec�ficas de tu hoja de c�lculo principal
-    ArchivoDestino.Sheets("Percentage").Range("D7").value = trimestreSQFT1
-    ArchivoDestino.Sheets("Percentage").Range("D29").value = trimestreSQFT2
-    ArchivoDestino.Sheets("Percentage").Range("D51").value = trimestreSQFT3
-    ArchivoDestino.Sheets("Percentage").Range("D73").value = trimestreSQFT4
+    ArchivoDestino.Sheets("Percentage").Range("D7").Value = trimestreSQFT1
+    ArchivoDestino.Sheets("Percentage").Range("D29").Value = trimestreSQFT2
+    ArchivoDestino.Sheets("Percentage").Range("D51").Value = trimestreSQFT3
+    ArchivoDestino.Sheets("Percentage").Range("D73").Value = trimestreSQFT4
     archivoOrigen.Close SaveChanges:=False
 End Sub
 
