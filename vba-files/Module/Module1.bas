@@ -4,8 +4,13 @@ Dim archivoOrigenPath As String
 
 Public RangoHojaOrigen() As String ' Variable para almacenar los rangos de la hoja de origen
 Public RangoHojaDestino As String ' Variable para almacenar el rango de la hoja de destino
+Public RangoHojaDestinoGlobal As String ' Variable global para almacenar el rango de la hoja de destino
+Public RealizarAsignacion As Boolean
+
+
 
 Sub ObtenerYColocarShifts()
+    Dim asignacionRealizada As Boolean
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
@@ -42,7 +47,8 @@ Sub ObtenerYColocarShifts()
     
     ' Redimensionar el arreglo para almacenar los rangos
     ReDim RangoHojaOrigen(1 To 7)
-    
+    asignacionRealizada = False
+     
     ' Procesar cada turno
     For turno = 1 To 7
         Dim turnoNombre As String
@@ -50,13 +56,26 @@ Sub ObtenerYColocarShifts()
         
         ' Definir el rango de la hoja de origen
         RangoHojaOrigen(turno) = hojaOrigen.Range("S" & (45 + ((turno - 1) * 41)) & ":AD" & (81 + ((turno - 1) * 41))).Address
-        
+       
         ' Definir el rango de la hoja de destino
         RangoHojaDestino = ArchivoDestino.Sheets("Sheet1").Range("S" & (45 + ((turno - 1) * 41)) & ":AD" & (81 + ((turno - 1) * 41))).Address
         
+        RangoHojaDestinoGlobal = RangoHojaDestino
         ' Asignar valores desde la hoja de origen a la hoja de destino
-        ArchivoDestino.Sheets("Sheet1").Range(RangoHojaDestino).Value = hojaOrigen.Range(RangoHojaOrigen(turno)).Value
+        If RealizarAsignacion Then
+            If RangoHojaDestinoGlobal <> "" Then
+                ArchivoDestino.Sheets("Sheet1").Range(RangoHojaDestinoGlobal).Value = hojaOrigen.Range(RangoHojaOrigen(turno)).Value
+                asignacionRealizada = True
+            Else
+                MsgBox "Rango vacío", vbExclamation
+            End If
+        End If
     Next turno
+    
+    ' Mostrar el mensaje solo si se realizó al menos una asignación
+    If asignacionRealizada Then
+        MsgBox "Se borró correctamente.", vbExclamation
+    End If
     
     ' Cerrar el archivo de origen sin guardar cambios
     archivoOrigen.Close SaveChanges:=False

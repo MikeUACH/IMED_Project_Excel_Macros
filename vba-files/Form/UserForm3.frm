@@ -13,8 +13,6 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
-
 Private Sub CommandButton1_Click()
     ObtenerYColocarTabsUnabFlex
 End Sub
@@ -149,7 +147,7 @@ Private Sub Image7_Click()
 End Sub
 Private Sub Image8_Click()
         Unload Me
-        UserForm1.Show
+        UserForm1.Show vbModeless
 End Sub
 
 Private Sub Label1_Click()
