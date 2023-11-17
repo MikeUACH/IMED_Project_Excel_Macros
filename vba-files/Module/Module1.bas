@@ -2,15 +2,10 @@ Attribute VB_Name = "Module1"
 Dim ArchivoDestinoPath As String ' Variable global para almacenar la ruta del archivo origen
 Dim archivoOrigenPath As String
 
-Public RangoHojaOrigen() As String ' Variable para almacenar los rangos de la hoja de origen
-Public RangoHojaDestino As String ' Variable para almacenar el rango de la hoja de destino
-Public RangoHojaDestinoGlobal As String ' Variable global para almacenar el rango de la hoja de destino
-Public RealizarAsignacion As Boolean
-
-
+Public RangoHojaOrigen() As Variant ' Variable para almacenar los rangos de la hoja de origen
+Public RangoHojaDestino As Range ' Variable para almacenar el rango de la hoja de destino
 
 Sub ObtenerYColocarShifts()
-    Dim asignacionRealizada As Boolean
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
@@ -46,36 +41,32 @@ Sub ObtenerYColocarShifts()
     nombresTurnos = Split("FirstShift,SecondShift,ThirdShift,FourTwentyShift,FourTwentyOneShift,FourTwentyTwoShift,FourTwentyThreeShift", ",")
     
     ' Redimensionar el arreglo para almacenar los rangos
-    ReDim RangoHojaOrigen(1 To 7)
-    asignacionRealizada = False
-     
+    ReDim RangoHojaOrigen(1 To 7, 1 To 7)
+    
     ' Procesar cada turno
     For turno = 1 To 7
         Dim turnoNombre As String
         turnoNombre = nombresTurnos(turno - 1)
         
-        ' Definir el rango de la hoja de origen
-        RangoHojaOrigen(turno) = hojaOrigen.Range("S" & (45 + ((turno - 1) * 41)) & ":AD" & (81 + ((turno - 1) * 41))).Address
-       
-        ' Definir el rango de la hoja de destino
-        RangoHojaDestino = ArchivoDestino.Sheets("Sheet1").Range("S" & (45 + ((turno - 1) * 41)) & ":AD" & (81 + ((turno - 1) * 41))).Address
+        ' Obtener rango de celdas B9:B15 de la hoja de configuración
+        Dim rangoTurno As Range
+        Set rangoTurno = ThisWorkbook.Sheets("hojaConfiguracion").Range("B9:B15")
         
-        RangoHojaDestinoGlobal = RangoHojaDestino
-        ' Asignar valores desde la hoja de origen a la hoja de destino
-        If RealizarAsignacion Then
-            If RangoHojaDestinoGlobal <> "" Then
-                ArchivoDestino.Sheets("Sheet1").Range(RangoHojaDestinoGlobal).Value = hojaOrigen.Range(RangoHojaOrigen(turno)).Value
-                asignacionRealizada = True
-            Else
-                MsgBox "Rango vacío", vbExclamation
-            End If
-        End If
+        ' Iterar a través de cada celda del rango y asignar sus valores
+        Dim i As Integer
+        i = 1 ' Iniciar desde la primera posición en la matriz
+        For Each celda In rangoTurno
+            RangoHojaOrigen(turno, i) = celda.Value
+            i = i + 1 ' Mover a la siguiente posición en la matriz
+        Next celda
+        
+        ' Definir el rango de la hoja de destino
+        Set RangoHojaDestino = ThisWorkbook.Sheets("hojaConfiguracion").Range("B16")
+        
+        ' Asignar los valores al rango de destino
+        RangoHojaDestino.Resize(, UBound(RangoHojaOrigen, 2)).Value = RangoHojaOrigen(turno, 1 To UBound(RangoHojaOrigen, 2))
+        
     Next turno
-    
-    ' Mostrar el mensaje solo si se realizó al menos una asignación
-    If asignacionRealizada Then
-        MsgBox "Se borró correctamente.", vbExclamation
-    End If
     
     ' Cerrar el archivo de origen sin guardar cambios
     archivoOrigen.Close SaveChanges:=False

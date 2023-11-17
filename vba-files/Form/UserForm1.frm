@@ -14,43 +14,18 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub btnBorrarDestinoSTWF_Click()
-    Dim ArchivoDestino As Workbook
-    Dim hojaDestino As Worksheet
-
-    ' Verifica si ya se ha seleccionado un archivo de destino previamente
-    If ArchivoDestinoPath = "" Then
-        ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo de destino (BU Scenario Flexline)")
-        If ArchivoDestinoPath = "Falso" Then
-            Exit Sub
-        End If
-    End If
-
-    ' Abre el archivo de destino seleccionado
-    Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
-
-    ' Define la hoja de cálculo en el archivo de destino
-    Set hojaDestino = ArchivoDestino.Sheets("Sheet1")
-    
-    ' Establece la variable RealizarAsignacion en False
-    RealizarAsignacion = False
-    
-    ' Verifica si la variable RangoHojaDestino está definida
-    If RangoHojaDestino <> "" Then
-        ' Borra el contenido del rango en la hoja de destino
-        hojaDestino.Range(RangoHojaDestinoGlobal).ClearContents
-        hojaDestino.Range(RangoHojaDestino).ClearContents
+    ' Verifica si la variable RangoHojaDestino estï¿½ definida
+    If RangoCeldaSTFW <> "" Then
         txtDestinoSTWF.Value = ""
-        ' Reinicia la variable RangoHojaDestino a una cadena vacía en el módulo
-        RangoHojaDestinoGlobal = ""
-        ' Asigna una cadena vacía a la variable global en el módulo
-        RangoHojaDestino = ""
+        ' Reinicia la variable RangoHojaDestino a una cadena vacï¿½a en el mï¿½dulo
+        ThisWorkbook.Sheets("hojaConfiguracion").Range("B16").ClearContents
     Else
-        MsgBox "La variable RangoHojaDestino no está definida. Ejecute primero la subrutina ObtenerYColocarShifts.", vbExclamation
+        MsgBox "El rango no está definido.", vbExclamation
     End If
     
-    ' Mostrar el mensaje solo si se borró algo
-    If RangoHojaDestino <> "" Then
-        MsgBox "Se borró correctamente.", vbExclamation
+    ' Mostrar el mensaje solo si se borrï¿½ algo
+    If RangoCeldaSTFW = "" Then
+        MsgBox "Se borrï¿½ correctamente.", vbExclamation
     End If
 End Sub
 
@@ -59,50 +34,47 @@ Private Sub btnSeleccionarDestinoSTWF_Click()
     Dim ArchivoDestino As Workbook
     Dim hojaDestino As Worksheet
 
-    ' Verifica si ya se ha seleccionado un archivo de destino previamente
-    If ArchivoDestinoPath = "" Then
-        ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo de destino (BU Scenario Flexline)")
-        If ArchivoDestinoPath = "Falso" Then
-            Exit Sub
-        End If
-    End If
-    
-    ' Define la hoja de configuración en el libro actual (ajusta el nombre según tus necesidades)
+    ' Define la hoja de configuraciï¿½n en el libro actual (ajusta el nombre segï¿½n tus necesidades)
     Set hojaConfiguracion = ThisWorkbook.Sheets("hojaConfiguracion")
-    
-    ' Abre el archivo de destino seleccionado
-    Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
 
-    ' Define la hoja de cálculo en el archivo de destino
-    Set hojaDestino = ArchivoDestino.Sheets("Sheet1")
     ' Solicitar al usuario que seleccione un rango
     On Error Resume Next
     Set rangoSeleccionado = Application.InputBox("Selecciona el rango de datos que deseas utilizar", Type:=8)
     On Error GoTo 0
     
-    ' Verificar si el usuario seleccionó un rango
+    ' Verificar si el usuario seleccionï¿½ un rango
     If Not rangoSeleccionado Is Nothing Then
-        ' Guardar el rango en la celda B10 de la hoja de configuración
-        hojaConfiguracion.Range("B10").Value = rangoSeleccionado.Address
-        hojaConfiguracion.Columns("B:B").AutoFit ' Ajustar automáticamente el ancho de la columna B
+        ' Guardar el rango en la celda B10 de la hoja de configuraciï¿½n
+        hojaConfiguracion.Range("B16").Value = rangoSeleccionado.Address
+        hojaConfiguracion.Columns("B:B").AutoFit ' Ajustar automï¿½ticamente el ancho de la columna B
         MsgBox "Rango seleccionado: " & rangoSeleccionado.Address
     Else
-        MsgBox "Operación cancelada por el usuario.", vbInformation
+        MsgBox "Operaciï¿½n cancelada por el usuario.", vbInformation
     End If
 End Sub
-
 Private Sub UserForm_Initialize()
-    ' Llama a la subrutina para obtener y colocar los turnos
+    ' Obtener el rango de celdas B9:B15 desde la hoja de configuración
+    Dim rangoConfiguracion As Range
+    Set rangoConfiguracion = ThisWorkbook.Sheets("hojaConfiguracion").Range("B9:B15")
     
-    ' Muestra el contenido de la variable RangoHojaOrigen en el TextBox
+    ' Obtener los valores del rango y asignarlos a un array
+    Dim valoresConfiguracion() As Variant
+    valoresConfiguracion = rangoConfiguracion.Value
+
+    ' Mostrar los valores en txtOrigenSTWF
     With Me.txtOrigenSTWF
-        ' Utiliza la función Join para concatenar los elementos del array en una cadena
-        .Value = Join(RangoHojaOrigen, vbNewLine)
+        ' Utilizar Join para concatenar los elementos del array en una cadena con saltos de línea
+        .Value = Join(Application.WorksheetFunction.Transpose(valoresConfiguracion), vbCrLf)
     End With
+
+    ' Obtener y mostrar el valor de RangoCeldaSTFW
+    Dim RangoCeldaSTFW As String
+    RangoCeldaSTFW = ThisWorkbook.Sheets("hojaConfiguracion").Range("B10").Value
     With Me.txtDestinoSTWF
-        .Value = RangoHojaDestino
+        .Value = RangoCeldaSTFW
     End With
 End Sub
+
 Private Sub CommandButton25_Click()
     Unload Me
     UserForm2.Show
