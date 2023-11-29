@@ -14,19 +14,20 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub btnBorrarDestinoSTWF_Click()
-    ' Verifica si la variable RangoHojaDestino estï¿½ definida
+    ' Verifica si la variable RangoHojaDestino esta definida
     If RangoCeldaSTFW <> "" Then
         txtDestinoSTWF.Value = ""
         ' Reinicia la variable RangoHojaDestino a una cadena vacï¿½a en el mï¿½dulo
         ThisWorkbook.Sheets("hojaConfiguracion").Range("B16").ClearContents
+        If RangoCeldaSTFW = "" Then
+            MsgBox "Se borro correctamente.", vbExclamation
+        End If
     Else
         MsgBox "El rango no está definido.", vbExclamation
     End If
     
     ' Mostrar el mensaje solo si se borrï¿½ algo
-    If RangoCeldaSTFW = "" Then
-        MsgBox "Se borrï¿½ correctamente.", vbExclamation
-    End If
+    
 End Sub
 
 Private Sub btnSeleccionarDestinoSTWF_Click()
@@ -46,7 +47,6 @@ Private Sub btnSeleccionarDestinoSTWF_Click()
     If Not rangoSeleccionado Is Nothing Then
         ' Guardar el rango en la celda B10 de la hoja de configuraciï¿½n
         hojaConfiguracion.Range("B16").Value = rangoSeleccionado.Address
-        hojaConfiguracion.Columns("B:B").AutoFit ' Ajustar automï¿½ticamente el ancho de la columna B
         MsgBox "Rango seleccionado: " & rangoSeleccionado.Address
     Else
         MsgBox "Operaciï¿½n cancelada por el usuario.", vbInformation
@@ -69,7 +69,7 @@ Private Sub UserForm_Initialize()
 
     ' Obtener y mostrar el valor de RangoCeldaSTFW
     Dim RangoCeldaSTFW As String
-    RangoCeldaSTFW = ThisWorkbook.Sheets("hojaConfiguracion").Range("B10").Value
+    RangoCeldaSTFW = ThisWorkbook.Sheets("hojaConfiguracion").Range("B16").Value
     With Me.txtDestinoSTWF
         .Value = RangoCeldaSTFW
     End With
