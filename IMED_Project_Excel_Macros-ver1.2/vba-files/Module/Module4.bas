@@ -2,7 +2,7 @@ Attribute VB_Name = "Module4"
 Dim archivoOrigenPath As String ' Variable global para almacenar la ruta del archivo origen
 Dim ArchivoDestinoPath As String
 
-Sub RealizarOperaciones()
+Sub Inutil()
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
     Dim hojaDestino As Worksheet
@@ -14,21 +14,21 @@ Sub RealizarOperaciones()
     
     ' Verifica si ya se ha seleccionado un archivo previamente
     If archivoOrigenPath = "" Then
-        ' Abre el cuadro de diálogo de selección de archivo
+        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo
         archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo de origen(BU Scenario Flexline)")
-        ' Verifica si se seleccionó un archivo
+        ' Verifica si se seleccionï¿½ un archivo
         If archivoOrigenPath = "Falso" Then
-            Exit Sub ' Si no se seleccionó un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
         End If
     End If
     
     ' Verifica si ya se ha seleccionado un archivo previamente
     If ArchivoDestinoPath = "" Then
-        ' Abre el cuadro de diálogo de selección de archivo
+        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo
         ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo de destino(Unabsorbed Flexline)")
-        ' Verifica si se seleccionó un archivo
+        ' Verifica si se seleccionï¿½ un archivo
         If ArchivoDestinoPath = "Falso" Then
-            Exit Sub ' Si no se seleccionó un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
         End If
     End If
     
@@ -36,7 +36,7 @@ Sub RealizarOperaciones()
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)
     Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
     
-    ' Define la hoja de cálculo en el archivo de origen
+    ' Define la hoja de cï¿½lculo en el archivo de origen
     Set hojaDestino = ArchivoDestino.Sheets("AllocationTotal")
     
     ' Define la hoja de destino en tu libro actual

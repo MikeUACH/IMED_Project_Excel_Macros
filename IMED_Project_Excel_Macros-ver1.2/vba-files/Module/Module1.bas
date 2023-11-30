@@ -1,7 +1,7 @@
 Attribute VB_Name = "Module1"
 Dim ArchivoDestinoPath As String ' Variable global para almacenar la ruta del archivo origen
 Dim archivoOrigenPath As String
-Sub ObtenerYColocarShifts()
+Sub UpdWCstaffShiftTabsBU()
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
@@ -28,7 +28,7 @@ Sub ObtenerYColocarShifts()
     ' Abre el archivo de destino seleccionado
     Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
     
-    ' Define la hoja de cálculo en el archivo de origen
+    ' Define la hoja de cï¿½lculo en el archivo de origen
     Set hojaOrigen = archivoOrigen.Sheets("IMED DL Breakdow")
     
     ' Definir los nombres de los turnos

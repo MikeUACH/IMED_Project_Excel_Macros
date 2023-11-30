@@ -1,7 +1,7 @@
 Attribute VB_Name = "Module3"
 Dim ArchivoDestinoPath As String ' Variable global para almacenar la ruta del archivo origen
 Dim archivoOrigenPath As String
-Sub ObtenerYColocarWCStaffFormat()
+Sub UpdWCellTabBU()
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
@@ -12,21 +12,21 @@ Sub ObtenerYColocarWCStaffFormat()
     
         ' Verifica si ya se ha seleccionado un archivo previamente
     If archivoOrigenPath = "" Then
-        ' Abre el cuadro de diálogo de selección de archivo
+        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo
         archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo de origen(WC Staff IMED)")
-        ' Verifica si se seleccionó un archivo
+        ' Verifica si se seleccionï¿½ un archivo
         If archivoOrigenPath = "Falso" Then
-            Exit Sub ' Si no se seleccionó un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
         End If
     End If
     
     ' Verifica si ya se ha seleccionado un archivo previamente
     If ArchivoDestinoPath = "" Then
-        ' Abre el cuadro de diálogo de selección de archivo
+        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo
         ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo de destino(BU Scenario Flexline)")
-        ' Verifica si se seleccionó un archivo
+        ' Verifica si se seleccionï¿½ un archivo
         If ArchivoDestinoPath = "Falso" Then
-            Exit Sub ' Si no se seleccionó un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
         End If
     End If
     
@@ -35,10 +35,10 @@ Sub ObtenerYColocarWCStaffFormat()
     Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
     
     
-    ' Define la hoja de cálculo en el archivo de origen (en este caso, la hoja "IMED")
+    ' Define la hoja de cï¿½lculo en el archivo de origen (en este caso, la hoja "IMED")
     Set hojaOrigen = archivoOrigen.Sheets("IMED")
     
-    ' Define el rango de la tabla excluyendo las celdas A34:M35 (ajusta los números de filas y columnas según tu tabla)
+    ' Define el rango de la tabla excluyendo las celdas A34:M35 (ajusta los nï¿½meros de filas y columnas segï¿½n tu tabla)
     Set rangoTabla = Union(hojaOrigen.Range("A1:M33"), hojaOrigen.Range("A36").Resize(13, 36))
     
     ' Buscar la palabra "NUEVO Forecast" en la tabla
@@ -46,18 +46,18 @@ Sub ObtenerYColocarWCStaffFormat()
     Set celdaInicio = rangoTabla.Find("NUEVO Forecast")
     On Error GoTo 0
     
-    ' Verificar si se encontró la palabra
+    ' Verificar si se encontrï¿½ la palabra
     If Not celdaInicio Is Nothing Then
-        ' Obtener la fila de inicio donde se encontró la palabra
+        ' Obtener la fila de inicio donde se encontrï¿½ la palabra
         filaInicio = celdaInicio.Row
         
         ' Definir el rango de datos a copiar excluyendo la fila donde se encuentra la palabra (36 columnas por 13 filas)
         Set rangoDatos = hojaOrigen.Range("A" & filaInicio + 1 & ":AL" & filaInicio + 13)
         
-        ' Copiar los datos al archivo de trabajo actual (ajusta el rango de destino según tus necesidades)
+        ' Copiar los datos al archivo de trabajo actual (ajusta el rango de destino segï¿½n tus necesidades)
         ArchivoDestino.Sheets("WCStaff Format").Range("B3").Resize(13, 33).Value = rangoDatos.Value
     Else
-        MsgBox "La palabra 'NUEVO Forecast' no se encontró en la tabla.", vbExclamation
+        MsgBox "La palabra 'NUEVO Forecast' no se encontrï¿½ en la tabla.", vbExclamation
     End If
     archivoOrigen.Close SaveChanges:=False
 End Sub
