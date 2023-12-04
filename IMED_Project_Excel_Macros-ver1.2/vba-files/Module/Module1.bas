@@ -1,7 +1,6 @@
 Attribute VB_Name = "Module1"
-Dim ArchivoDestinoPath As String ' Variable global para almacenar la ruta del archivo origen
 Dim archivoOrigenPath As String
-Sub UpdWCstaffShiftTabsBU()
+Sub UpdWCstaffShiftTabsBU(ByVal ArchivoDestinoPath As String)
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
@@ -11,14 +10,6 @@ Sub UpdWCstaffShiftTabsBU()
     If archivoOrigenPath = "" Then
         archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo de origen (DL Breakdown)")
         If archivoOrigenPath = "Falso" Then
-            Exit Sub
-        End If
-    End If
-    
-    ' Verifica si ya se ha seleccionado un archivo de destino previamente
-    If ArchivoDestinoPath = "" Then
-        ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo de destino (BU Scenario Flexline)")
-        If ArchivoDestinoPath = "Falso" Then
             Exit Sub
         End If
     End If

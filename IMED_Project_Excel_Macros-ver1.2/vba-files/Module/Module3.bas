@@ -1,7 +1,7 @@
 Attribute VB_Name = "Module3"
-Dim ArchivoDestinoPath As String ' Variable global para almacenar la ruta del archivo origen
 Dim archivoOrigenPath As String
-Sub UpdWCellTabBU()
+Public ArchivoDestinoPathBU As String
+Sub UpdWCellTabBU(ByVal ArchivoDestinoPathBU As String)
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
@@ -20,19 +20,9 @@ Sub UpdWCellTabBU()
         End If
     End If
     
-    ' Verifica si ya se ha seleccionado un archivo previamente
-    If ArchivoDestinoPath = "" Then
-        ' Abre el cuadro de di�logo de selecci�n de archivo
-        ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo de destino(BU Scenario Flexline)")
-        ' Verifica si se seleccion� un archivo
-        If ArchivoDestinoPath = "Falso" Then
-            Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
-        End If
-    End If
-    
     ' Usa el archivo seleeccionado como ArchivoDestino
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)
-    Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
+    Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPathBU)
     
     
     ' Define la hoja de c�lculo en el archivo de origen (en este caso, la hoja "IMED")

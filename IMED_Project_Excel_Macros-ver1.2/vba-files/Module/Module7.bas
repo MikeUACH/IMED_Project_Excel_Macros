@@ -22,21 +22,21 @@ Sub ActualizarPercentageTABFlexline()
     
     ' Verifica si ya se ha seleccionado un archivo de origen previamente
     If archivoOrigenPath = "" Then
-        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo con un tï¿½tulo personalizado para el archivo de origen
+        ' Abre el cuadro de di?logo de selecci?n de archivo con un t?tulo personalizado para el archivo de origen
         archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo de origen(BU Scenario Flexline)")
-        ' Verifica si se seleccionï¿½ un archivo
+        ' Verifica si se seleccion? un archivo
         If archivoOrigenPath = "Falso" Then
-            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccion? un archivo, sale del procedimiento
         End If
     End If
     
     ' Verifica si ya se ha seleccionado un archivo previamente
     If ArchivoDestinoPath = "" Then
-        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo
+        ' Abre el cuadro de di?logo de selecci?n de archivo
         ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo de destino(Unabsorbed Flexline)")
-        ' Verifica si se seleccionï¿½ un archivo
+        ' Verifica si se seleccion? un archivo
         If ArchivoDestinoPath = "Falso" Then
-            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccion? un archivo, sale del procedimiento
         End If
     End If
     
@@ -44,11 +44,11 @@ Sub ActualizarPercentageTABFlexline()
     Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)
     
-    ' Define la hoja de cï¿½lculo en el archivo de origen
+    ' Define la hoja de c?lculo en el archivo de origen
     Set hojaOrigen = archivoOrigen.Sheets("Non Mat Margin")
     Set hojaOrigen2 = archivoOrigen.Sheets("WCStaff Format")
 
-    ' ObtÃ©n el nÃºmero del mes actual
+    ' Obtén el número del mes actual
     Dim mesActual As Integer
     mesActual = Month(Date)
 
@@ -62,9 +62,9 @@ Sub ActualizarPercentageTABFlexline()
             trimestreSQFT1 = Application.WorksheetFunction.Sum(hojaOrigen.Range("D126:F126"))
             ' Calcula el promedio de cada trimestre dividiendo por 3
             trimestre1 = trimestre1 / 3
-            trimestreWCStaff1 = trimestreWCStaff1 / 3         
-            trimestreSQFT1 = trimestreSQFT1 / 3  
-            ' Coloca los valores obtenidos en celdas especï¿½ficas de tu hoja de cï¿½lculo principal
+            trimestreWCStaff1 = trimestreWCStaff1 / 3
+            trimestreSQFT1 = trimestreSQFT1 / 3
+            ' Coloca los valores obtenidos en celdas espec?ficas de tu hoja de c?lculo principal
             ArchivoDestino.Sheets("Percentage").Range("D3").Value = trimestre1
             ArchivoDestino.Sheets("Percentage").Range("D5").Value = trimestreWCStaff1
             ArchivoDestino.Sheets("Percentage").Range("D7").Value = trimestreSQFT1
@@ -78,43 +78,40 @@ Sub ActualizarPercentageTABFlexline()
             trimestre2 = trimestre2 / 3
             trimestreWCStaff2 = trimestreWCStaff2 / 3
             trimestreSQFT2 = trimestreSQFT2 / 3
-            ' Coloca los valores obtenidos en celdas especï¿½ficas de tu hoja de cï¿½lculo principal
+            ' Coloca los valores obtenidos en celdas espec?ficas de tu hoja de c?lculo principal
             ArchivoDestino.Sheets("Percentage").Range("D3").Value = trimestre2
-            ArchivoDestino.Sheets("Percentage").Range("D27").Value = trimestreWCStaff2
-            ArchivoDestino.Sheets("Percentage").Range("D29").Value = trimestreSQFT2
+            ArchivoDestino.Sheets("Percentage").Range("D5").Value = trimestreWCStaff2
+            ArchivoDestino.Sheets("Percentage").Range("D7").Value = trimestreSQFT2
         Case 7 To 9
             ' Trimestre 3 (julio a septiembre)
             ' Obtiene los valores correspondientes al trimestre
-            trimestre3 = Application.WorksheetFunction.Sum(hojaOrigen.Range("J115:L115"))          
+            trimestre3 = Application.WorksheetFunction.Sum(hojaOrigen.Range("J115:L115"))
             trimestreWCStaff3 = Application.WorksheetFunction.Sum(hojaOrigen2.Range("I37:K37"))
             trimestreSQFT3 = Application.WorksheetFunction.Sum(hojaOrigen.Range("J126:L126"))
             ' Calcula el promedio de cada trimestre dividiendo por 3
             trimestre3 = trimestre3 / 3
             trimestreWCStaff3 = trimestreWCStaff3 / 3
             trimestreSQFT3 = trimestreSQFT3 / 3
-            ' Coloca los valores obtenidos en celdas especï¿½ficas de tu hoja de cï¿½lculo principal
+            ' Coloca los valores obtenidos en celdas espec?ficas de tu hoja de c?lculo principal
             ArchivoDestino.Sheets("Percentage").Range("D3").Value = trimestre3
-            ArchivoDestino.Sheets("Percentage").Range("D49").Value = trimestreWCStaff3
-            ArchivoDestino.Sheets("Percentage").Range("D51").Value = trimestreSQFT3
+            ArchivoDestino.Sheets("Percentage").Range("D5").Value = trimestreWCStaff3
+            ArchivoDestino.Sheets("Percentage").Range("D7").Value = trimestreSQFT3
         Case 10 To 12
             ' Trimestre 4 (octubre a diciembre)
             ' Obtiene los valores correspondientes al trimestre
-            trimestre4 = Application.WorksheetFunction.Sum(hojaOrigen.Range("M115:O115")) 
+            trimestre4 = Application.WorksheetFunction.Sum(hojaOrigen.Range("M115:O115"))
             trimestreWCStaff4 = Application.WorksheetFunction.Sum(hojaOrigen2.Range("L37:N37"))
             trimestreSQFT4 = Application.WorksheetFunction.Sum(hojaOrigen.Range("M126:O126"))
             ' Calcula el promedio de cada trimestre dividiendo por 3
             trimestre4 = trimestre4 / 3
             trimestreWCStaff4 = trimestreWCStaff4 / 3
             trimestreSQFT4 = trimestreSQFT4 / 3
-            ' Coloca los valores obtenidos en celdas especï¿½ficas de tu hoja de cï¿½lculo principal
+            ' Coloca los valores obtenidos en celdas espec?ficas de tu hoja de c?lculo principal
             ArchivoDestino.Sheets("Percentage").Range("D3").Value = trimestre4
-            ArchivoDestino.Sheets("Percentage").Range("D71").Value = trimestreWCStaff4
-            ArchivoDestino.Sheets("Percentage").Range("D73").Value = trimestreSQFT4
+            ArchivoDestino.Sheets("Percentage").Range("D5").Value = trimestreWCStaff4
+            ArchivoDestino.Sheets("Percentage").Range("D7").Value = trimestreSQFT4
     End Select
      
     archivoOrigen.Close SaveChanges:=False
 End Sub
-
-
-
 

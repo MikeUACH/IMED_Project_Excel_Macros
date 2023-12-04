@@ -8,9 +8,9 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub CommandButton1_Click()
-    UserForm3.Show
+    UserForm3.Show vbModeless
 End Sub
 
 Private Sub Worksheet_Activate()
-    UserForm3.Show
+    UserForm3.Show vbModeless
 End Sub

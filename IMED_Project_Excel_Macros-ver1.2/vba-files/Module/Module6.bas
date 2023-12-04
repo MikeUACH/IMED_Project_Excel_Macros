@@ -8,21 +8,21 @@ Sub ActualizarTABRateCalcFlex()
     
     ' Verifica si ya se ha seleccionado un archivo de origen previamente
     If archivoOrigenPath = "" Then
-        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo con un tï¿½tulo personalizado para el archivo de origen
+        ' Abre el cuadro de diálogo de selección de archivo con un título personalizado para el archivo de origen
         archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo de origen(BU Scenario Flexline)")
-        ' Verifica si se seleccionï¿½ un archivo
+        ' Verifica si se seleccionó un archivo
         If archivoOrigenPath = "Falso" Then
-            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccionó un archivo, sale del procedimiento
         End If
     End If
     
     ' Verifica si ya se ha seleccionado un archivo previamente
     If ArchivoDestinoPath = "" Then
-        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo
+        ' Abre el cuadro de diálogo de selección de archivo
         ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo de destino(Unabsorbed Flexline)")
-        ' Verifica si se seleccionï¿½ un archivo
+        ' Verifica si se seleccionó un archivo
         If ArchivoDestinoPath = "Falso" Then
-            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccionó un archivo, sale del procedimiento
         End If
     End If
     
@@ -32,10 +32,10 @@ Sub ActualizarTABRateCalcFlex()
     Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
     
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)
-    ' Define la hoja de cï¿½lculo en el archivo de origen
+    ' Define la hoja de cálculo en el archivo de origen
     Set hojaOrigen = archivoOrigen.Sheets("Income Statement")
 
-    ' Resto del cï¿½digo para obtener y colocar valores aquï¿½...
+    ' Resto del código para obtener y colocar valores aquí...
     ' Obtiene los valores de Q1, Q2, Q3 y Q4 directamente desde las celdas
     valores(1, 1) = hojaOrigen.Range("T10").Value
     valores(1, 2) = hojaOrigen.Range("U10").Value
@@ -80,9 +80,9 @@ Sub ActualizarTABRateCalcFlex()
     ' Cierra el archivo de origen sin guardar cambios
     ' archivoOrigen.Close SaveChanges:=False
 
-    ' Coloca los valores obtenidos en celdas especï¿½ficas de tu hoja de cï¿½lculo principal
-    For i = 1 To 7 ' Cambia el lï¿½mite para i a 6
-        For j = 1 To 4 ' Cambia el lï¿½mite para j a 4
+    ' Coloca los valores obtenidos en celdas específicas de tu hoja de cálculo principal
+    For i = 1 To 7 ' Cambia el límite para i a 6
+        For j = 1 To 4 ' Cambia el límite para j a 4
             ArchivoDestino.Sheets("Rate Calculation").Cells(i + 2, j + 31).Value = valores(i, j)
         Next j
     Next i
