@@ -1,7 +1,5 @@
 Attribute VB_Name = "Module7"
-Dim ArchivoDestinoPath As String ' Variable global para almacenar la ruta del archivo origen
-Dim archivoOrigenPath As String
-Sub ActualizarPercentageTABFlexline()
+Sub ActualizarPercentageTABFlexline(ByVal archivoOrigenPath As String, ByVal ArchivoDestinoPath As String)
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
     
@@ -20,26 +18,6 @@ Sub ActualizarPercentageTABFlexline()
     Dim trimestreSQFT3 As Double
     Dim trimestreSQFT4 As Double
     
-    ' Verifica si ya se ha seleccionado un archivo de origen previamente
-    If archivoOrigenPath = "" Then
-        ' Abre el cuadro de di?logo de selecci?n de archivo con un t?tulo personalizado para el archivo de origen
-        archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo de origen(BU Scenario Flexline)")
-        ' Verifica si se seleccion? un archivo
-        If archivoOrigenPath = "Falso" Then
-            Exit Sub ' Si no se seleccion? un archivo, sale del procedimiento
-        End If
-    End If
-    
-    ' Verifica si ya se ha seleccionado un archivo previamente
-    If ArchivoDestinoPath = "" Then
-        ' Abre el cuadro de di?logo de selecci?n de archivo
-        ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo de destino(Unabsorbed Flexline)")
-        ' Verifica si se seleccion? un archivo
-        If ArchivoDestinoPath = "Falso" Then
-            Exit Sub ' Si no se seleccion? un archivo, sale del procedimiento
-        End If
-    End If
-    
     ' Abre el archivo de origen seleccionado
     Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)
@@ -48,7 +26,7 @@ Sub ActualizarPercentageTABFlexline()
     Set hojaOrigen = archivoOrigen.Sheets("Non Mat Margin")
     Set hojaOrigen2 = archivoOrigen.Sheets("WCStaff Format")
 
-    ' Obtén el número del mes actual
+    ' Obtï¿½n el nï¿½mero del mes actual
     Dim mesActual As Integer
     mesActual = Month(Date)
 
@@ -111,7 +89,5 @@ Sub ActualizarPercentageTABFlexline()
             ArchivoDestino.Sheets("Percentage").Range("D5").Value = trimestreWCStaff4
             ArchivoDestino.Sheets("Percentage").Range("D7").Value = trimestreSQFT4
     End Select
-     
-    archivoOrigen.Close SaveChanges:=False
 End Sub
 

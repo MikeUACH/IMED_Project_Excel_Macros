@@ -1,7 +1,6 @@
 Attribute VB_Name = "Module3"
 Dim archivoOrigenPath As String
-Public ArchivoDestinoPathBU As String
-Sub UpdWCellTabBU(ByVal ArchivoDestinoPathBU As String)
+Sub UpdWCellTabBU(ByVal ArchivoDestinoPath As String)
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
@@ -22,7 +21,7 @@ Sub UpdWCellTabBU(ByVal ArchivoDestinoPathBU As String)
     
     ' Usa el archivo seleeccionado como ArchivoDestino
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)
-    Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPathBU)
+    Set ArchivoDestino = Workbooks.Open(ArchivoDestinoPath)
     
     
     ' Define la hoja de c�lculo en el archivo de origen (en este caso, la hoja "IMED")

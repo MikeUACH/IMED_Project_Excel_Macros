@@ -1,28 +1,18 @@
 Attribute VB_Name = "Module8"
-Dim archivoOrigenPath As String ' Variable global para almacenar la ruta del archivo origen
 Dim ArchivoDestinoPath As String
-Sub ObtenerYColocarTabsUnabFlex()
+Sub ObtenerYColocarTabsUnabFlex(ByVal archivoOrigenPath As String)
     Dim archivoOrigen As Workbook
     
     Dim hojaOrigen As Worksheet
     Dim hojaDestino As Worksheet
-    ' Verifica si ya se ha seleccionado un archivo de origen previamente
-    If archivoOrigenPath = "" Then
-        ' Abre el cuadro de diálogo de selección de archivo con un título personalizado para el archivo de origen
-        archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo de origen(Flexline-Unabsorbed Calculation)")
-        ' Verifica si se seleccionó un archivo
-        If archivoOrigenPath = "Falso" Then
-            Exit Sub ' Si no se seleccionó un archivo, sale del procedimiento
-        End If
-    End If
     
     ' Verifica si ya se ha seleccionado un archivo previamente
     If ArchivoDestinoPath = "" Then
-        ' Abre el cuadro de diálogo de selección de archivo
+        ' Abre el cuadro de diï¿½logo de selecciï¿½n de archivo
         ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo de destino(Variance BID2 Vs BID 3)")
-        ' Verifica si se seleccionó un archivo
+        ' Verifica si se seleccionï¿½ un archivo
         If ArchivoDestinoPath = "Falso" Then
-            Exit Sub ' Si no se seleccionó un archivo, sale del procedimiento
+            Exit Sub ' Si no se seleccionï¿½ un archivo, sale del procedimiento
         End If
     End If
     
@@ -65,7 +55,6 @@ Sub ObtenerYColocarTabsUnabFlex()
     hojaDestino.Range("D17:O26").Value = AllocationUC
     hojaDestino.Range("D31:O40").Value = AllocationTotal
     
-    archivoOrigen.Close SaveChanges:=False
 End Sub
 
 
