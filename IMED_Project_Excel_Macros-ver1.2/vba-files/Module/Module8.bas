@@ -1,20 +1,10 @@
 Attribute VB_Name = "Module8"
 Dim ArchivoDestinoPath As String
-Sub ObtenerYColocarTabsUnabFlex(ByVal archivoOrigenPath As String)
+Sub ObtenerYColocarTabsUnabFlex(ByVal archivoOrigenPath As String, ByVal ArchivoDestinoPath As String)
     Dim archivoOrigen As Workbook
     
     Dim hojaOrigen As Worksheet
     Dim hojaDestino As Worksheet
-    
-    ' Verifica si ya se ha seleccionado un archivo previamente
-    If ArchivoDestinoPath = "" Then
-        ' Abre el cuadro de di�logo de selecci�n de archivo
-        ArchivoDestinoPath = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo de destino(Variance BID2 Vs BID 3)")
-        ' Verifica si se seleccion� un archivo
-        If ArchivoDestinoPath = "Falso" Then
-            Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
-        End If
-    End If
     
     ' Abre el archivo de origen seleccionado
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)

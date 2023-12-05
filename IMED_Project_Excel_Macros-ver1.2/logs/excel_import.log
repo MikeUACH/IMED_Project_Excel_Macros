@@ -80,3 +80,53 @@
 05/12/2023 08:28:13 a. m. - DEBUG:EXPORTING MODULES:Module8.bas Type: 1 - Module8
 05/12/2023 08:28:13 a. m. - DEBUG:EXPORTING CLASS MODULES:Xdebug.cls Type: 2 - Xdebug
 05/12/2023 08:28:13 a. m. - DEBUG:Export VBA Files To VSCode Finish
+05/12/2023 10:54:38 a. m. - DEBUG:Export VBA Files To VSCode Start
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING CLASS MODULES:ThisWorkbook.cls Type: 100 - ThisWorkbook
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet9.cls Type: 100 - Sheet9
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet11.cls Type: 100 - Sheet11
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet1.cls Type: 100 - Sheet1
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet2.cls Type: 100 - Sheet2
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING FORM MODULES:UserForm3.frmType: 3 - UserForm3
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING MODULES:Module1.bas Type: 1 - Module1
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING MODULES:Module2.bas Type: 1 - Module2
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING MODULES:Module3.bas Type: 1 - Module3
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING MODULES:Module4.bas Type: 1 - Module4
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING MODULES:Module6.bas Type: 1 - Module6
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING MODULES:Module7.bas Type: 1 - Module7
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING MODULES:Module8.bas Type: 1 - Module8
+05/12/2023 10:54:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Xdebug.cls Type: 2 - Xdebug
+05/12/2023 10:54:38 a. m. - DEBUG:Export VBA Files To VSCode Finish
+05/12/2023 11:05:00 a. m. - DEBUG:Export VBA Files To VSCode Start
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING CLASS MODULES:ThisWorkbook.cls Type: 100 - ThisWorkbook
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet9.cls Type: 100 - Sheet9
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet11.cls Type: 100 - Sheet11
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet1.cls Type: 100 - Sheet1
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet2.cls Type: 100 - Sheet2
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING FORM MODULES:UserForm3.frmType: 3 - UserForm3
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING MODULES:Module1.bas Type: 1 - Module1
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING MODULES:Module2.bas Type: 1 - Module2
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING MODULES:Module3.bas Type: 1 - Module3
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING MODULES:Module4.bas Type: 1 - Module4
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING MODULES:Module5.bas Type: 1 - Module5
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING MODULES:Module6.bas Type: 1 - Module6
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING MODULES:Module7.bas Type: 1 - Module7
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING MODULES:Module8.bas Type: 1 - Module8
+05/12/2023 11:05:00 a. m. - DEBUG:EXPORTING CLASS MODULES:Xdebug.cls Type: 2 - Xdebug
+05/12/2023 11:05:00 a. m. - DEBUG:Export VBA Files To VSCode Finish
+05/12/2023 11:57:37 a. m. - DEBUG:Export VBA Files To VSCode Start
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING CLASS MODULES:ThisWorkbook.cls Type: 100 - ThisWorkbook
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet9.cls Type: 100 - Sheet9
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet11.cls Type: 100 - Sheet11
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet1.cls Type: 100 - Sheet1
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Sheet2.cls Type: 100 - Sheet2
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING FORM MODULES:UserForm3.frmType: 3 - UserForm3
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING MODULES:Module1.bas Type: 1 - Module1
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING MODULES:Module2.bas Type: 1 - Module2
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING MODULES:Module3.bas Type: 1 - Module3
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING MODULES:Module4.bas Type: 1 - Module4
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING MODULES:Module5.bas Type: 1 - Module5
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING MODULES:Module6.bas Type: 1 - Module6
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING MODULES:Module7.bas Type: 1 - Module7
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING MODULES:Module8.bas Type: 1 - Module8
+05/12/2023 11:57:38 a. m. - DEBUG:EXPORTING CLASS MODULES:Xdebug.cls Type: 2 - Xdebug
+05/12/2023 11:57:38 a. m. - DEBUG:Export VBA Files To VSCode Finish

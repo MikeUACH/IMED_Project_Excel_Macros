@@ -1,18 +1,10 @@
 Attribute VB_Name = "Module1"
 Dim archivoOrigenPath As String
-Sub UpdWCstaffShiftTabsBU(ByVal ArchivoDestinoPath As String)
+Sub UpdWCstaffShiftTabsBU(ByVal archivoOrigenPath As String, ByVal ArchivoDestinoPath As String)
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
     Dim turno As Integer
-    
-    ' Verifica si ya se ha seleccionado un archivo de origen previamente
-    If archivoOrigenPath = "" Then
-        archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo de origen (DL Breakdown)")
-        If archivoOrigenPath = "Falso" Then
-            Exit Sub
-        End If
-    End If
     
     ' Abre el archivo de origen seleccionado
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)

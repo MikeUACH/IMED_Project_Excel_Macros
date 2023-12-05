@@ -15,127 +15,153 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 
-Private Sub CommandButton1_Click()
-    ObtenerYColocarTabsUnabFlex
+Dim PathBU As String
+Dim PathDL As String
+Dim PathWC As String
+Dim PathFlex As String
+Dim PathVariance As String
+Private Sub UserForm_Initialize()
+    ActualizarEstadoBotonBU
+End Sub
+' Hacer un If que haga que seleccione archivo con nombre similar
+Private Sub btnSeleccionarBU_Click()
+    If PathBU = "" Or PathBU = "False" Then
+        ' Abre el cuadro de di�logo de selecci�n de archivo
+        PathBU = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo BU Scenario Flexline")
+        ' Verifica si se seleccion� un archivo
+        If PathBU = "False" Then
+            Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
+        End If
+    End If
+    Debug.Print "Path BU: " & PathBU
+    ActualizarEstadoBotonBU
 End Sub
 
-Private Sub Label1_Click()
-    ' Cambia el color de fondo del Label al hacer clic en �l
-    Label1.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
-    Dim StartTime As Double
-    StartTime = Timer ' Guarda el tiempo de inicio
-    
-    Do
-        DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta seg�n sea necesario)
-    
-    Label1.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
-    ' L�gica para seleccionar autom�ticamente el archivo destino
-    ArchivoDestinoPathSC = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo BU Scenario Flexline")
-    
-    ' Verifica si se seleccion� un archivo
-    If ArchivoDestinoPathSC = "Falso" Then
-        Exit Sub
+Private Sub btnSeleccionarDL_Click()
+    If PathDL = "" Or PathDL = "False" Then
+        ' Abre el cuadro de di�logo de selecci�n de archivo
+        PathDL = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo DL Breakdown")
+        ' Verifica si se seleccion� un archivo
+        If PathDL = "False" Then
+            Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
+        End If
     End If
-
-    ArchivoOrigenPathUF = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo Unabsorbed Flexline")
     
-    ' Verifica si se seleccion� un archivo
-    If ArchivoOrigenPathUF = "Falso" Then
-        Exit Sub
-    End If
-
-    UpdWCstaffShiftTabsBU ArchivoDestinoPathSC  ' Llama al m�dulo 1
-    UpdNonMatMarginBU ArchivoDestinoPathSC, ArchivoOrigenPathUF     ' Llama al m�dulo 2
-    UpdWCellTabBU ArchivoDestinoPathSC   ' Llama al m�dulo 3
-    ActualizarPercentageTABFlexline ArchivoDestinoPathSC, ArchivoOrigenPathUF ' Llama al m�dulo 6
-    ActualizarTABRateCalcFlex ArchivoDestinoPathSC, ArchivoOrigenPathUF  ' Llama al m�dulo 7
-    ObtenerYColocarTabsUnabFlex ArchivoOrigenPathUF ' Llama al m�dulo 8
-    Dim wsRegistro As Worksheet
-    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
-    Dim lastRow As Long
-    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en archivos BU y Flexline, tambi�n se gener� el reporte"
-    wsRegistro.Columns("A:B").AutoFit
+    ActualizarEstadoBotonBU
+    Debug.Print "Path DL: " & PathDL
 End Sub
-Private Sub Label7_Click()
-    ' Cambia el color de fondo del Label al hacer clic en �l
-    Label1.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
-    Dim StartTime As Double
-    StartTime = Timer ' Guarda el tiempo de inicio
-    
-    Do
-        DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta seg�n sea necesario)
-    
-    Label1.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
-    ' L�gica para seleccionar autom�ticamente el archivo destino
-    ArchivoDestinoPathSC = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo BU Scenario Flexline")
-    
-    ' Verifica si se seleccion� un archivo
-    If ArchivoDestinoPathSC = "Falso" Then
-        Exit Sub
-    End If
 
-    ArchivoOrigenPathUF = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo Unabsorbed Flexline")
-    
-    ' Verifica si se seleccion� un archivo
-    If ArchivoOrigenPathUF = "Falso" Then
-        Exit Sub
+Private Sub btnSeleccionarWC_Click()
+    If PathWC = "" Or PathWC = "False" Then
+        ' Abre el cuadro de di�logo de selecci�n de archivo
+        PathWC = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo WC Staff")
+        ' Verifica si se seleccion� un archivo
+        If PathWC = "False" Then
+            Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
+        End If
     End If
-
-    UpdWCstaffShiftTabsBU ArchivoDestinoPathSC, ArchivoOrigenPathUF  ' Llama al m�dulo 1
-    UpdNonMatMarginBU ArchivoDestinoPathSC    ' Llama al m�dulo 2
-    UpdWCellTabBU ArchivoDestinoPathSC   ' Llama al m�dulo 3
-    ActualizarPercentageTABFlexline ArchivoDestinoPathSC, ArchivoOrigenPathUF ' Llama al m�dulo 6
-    ActualizarTABRateCalcFlex ArchivoDestinoPathSC, ArchivoOrigenPathUF  ' Llama al m�dulo 7
-    ObtenerYColocarTabsUnabFlex ArchivoOrigenPathUF ' Llama al m�dulo 8
-    Dim wsRegistro As Worksheet
-    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
-    Dim lastRow As Long
-    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en archivos BU y Flexline, tambi�n se genero el reporte"
-    wsRegistro.Columns("A:B").AutoFit
+    ActualizarEstadoBotonBU
+    Debug.Print "Path WC: " & PathWC
 End Sub
-Private Sub Label8_Click()
-    ' Cambia el color de fondo del Label al hacer clic en �l
-    Label1.BackColor = RGB(240, 240, 240) ' Gris claro al hacer clic en el Label
-    Dim StartTime As Double
-    StartTime = Timer ' Guarda el tiempo de inicio
-    
-    Do
-        DoEvents ' Permite que otros eventos se procesen
-    Loop While Timer < StartTime + 0.099 ' Espera 1 segundo (ajusta seg�n sea necesario)
-    
-    Label1.BackColor = RGB(255, 255, 255) ' Vuelve a color blanco
-    ' L�gica para seleccionar autom�ticamente el archivo destino
-    ArchivoDestinoPathSC = Application.GetOpenFilename("Archivos Excel (*.xlsb), *.xlsb", , "Selecciona el archivo BU Scenario Flexline")
-    
-    ' Verifica si se seleccion� un archivo
-    If ArchivoDestinoPathSC = "Falso" Then
-        Exit Sub
-    End If
 
-    ArchivoOrigenPathUF = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo Unabsorbed Flexline")
-    
-    ' Verifica si se seleccion� un archivo
-    If ArchivoOrigenPathUF = "Falso" Then
-        Exit Sub
+Private Sub btnSeleccionarFlex_Click()
+    If PathFlex = "" Or PathFlex = "False" Then
+        ' Abre el cuadro de di�logo de selecci�n de archivo
+        PathFlex = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo Flexline Unabsorbed-Calculation")
+        ' Verifica si se seleccion� un archivo
+        If PathFlex = "False" Then
+            Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
+        End If
     End If
-
-    UpdWCstaffShiftTabsBU ArchivoDestinoPathSC, ArchivoOrigenPathUF  ' Llama al m�dulo 1
-    UpdNonMatMarginBU ArchivoDestinoPathSC    ' Llama al m�dulo 2
-    UpdWCellTabBU ArchivoDestinoPathSC   ' Llama al m�dulo 3
-    ActualizarPercentageTABFlexline ArchivoDestinoPathSC, ArchivoOrigenPathUF ' Llama al m�dulo 6
-    ActualizarTABRateCalcFlex ArchivoDestinoPathSC, ArchivoOrigenPathUF  ' Llama al m�dulo 7
-    ObtenerYColocarTabsUnabFlex ArchivoOrigenPathUF ' Llama al m�dulo 8
-    Dim wsRegistro As Worksheet
-    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
-    Dim lastRow As Long
-    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en archivos BU y Flexline, tambi�n se genero el reporte"
-    wsRegistro.Columns("A:B").AutoFit
+    
+    ActualizarEstadoBotonBU
+    Debug.Print "Path Flex: " & PathFlex
 End Sub
+
+Private Sub btnSeleccionarVariance_Click()
+    If PathVariance = "" Or PathVariance = "False" Then
+        ' Abre el cuadro de di�logo de selecci�n de archivo
+        PathVariance = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo Variance BID")
+        ' Verifica si se seleccion� un archivo
+        If PathVariance = "False" Then
+            Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
+        End If
+    End If
+    
+    ActualizarEstadoBotonBU
+    Debug.Print "Path Variance: " & PathVariance
+End Sub
+    
+Private Sub btnActualizar_Click()
+    
+    ' ArchivoOrigenPathUF = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo Unabsorbed Flexline")
+    
+    ' Verifica si se seleccion� un archivo
+    ' If ArchivoOrigenPathUF = "Falso" Then
+        ' Exit Sub
+    ' End If
+    
+    ' Hacer un If para verificar que se han seleccionado los archivos necesarios
+    UpdWCstaffShiftTabsBU PathBU  ' Llama al m�dulo 1
+    UpdNonMatMarginBU PathFlex, PathBU    ' Llama al m�dulo 2
+    UpdWCellTabBU PathWC, PathBU   ' Llama al m�dulo 3
+    ActualizarPercentageTABFlexline PathBU, PathFlex ' Llama al m�dulo 6
+    ActualizarTABRateCalcFlex PathBU, PathFlex  ' Llama al m�dulo 7
+    ObtenerYColocarTabsUnabFlex PathFlex
+    
+    ' Dim wsRegistro As Worksheet
+    ' Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+    ' Dim lastRow As Long
+    ' lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+    ' wsRegistro.Cells(lastRow, 1).Value = Now
+    ' wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en archivos BU y Flexline"
+    ' wsRegistro.Columns("A:B").AutoFit
+End Sub
+
+Private Sub btnGenerarReporte_Click()
+   ' ObtenerYColocarTabsUnabFlex ArchivoOrigenPathUF ' Llama al m�dulo 8
+End Sub
+Private Sub ActualizarEstadoBotonBU()
+    If Len(PathBU) = 0 Or PathBU = "False" Then
+        btnSeleccionarBU.BackColor = RGB(255, 172, 172)
+        txtNotSelectedBU.Caption = "No se ha seleccionado"
+    Else
+        btnSeleccionarBU.BackColor = RGB(171, 255, 174)
+        Dim nombreArchivo As String
+        nombreArchivo = Mid(PathBU, InStrRev(PathBU, "\") + 1)
+        txtNotSelectedBU.Caption = "Seleccionado: " & nombreArchivo
+    End If
+    
+    If Len(PathDL) = 0 Or PathDL = "False" Then
+        btnSeleccionarDL.BackColor = RGB(255, 172, 172)
+        txtNotSelectedDL.Caption = "No se ha seleccionado"
+    Else
+        btnSeleccionarDL.BackColor = RGB(171, 255, 174)
+        txtNotSelectedDL.Caption = ""
+    End If
+    
+    If Len(PathWC) = 0 Or PathWC = "False" Then
+        btnSeleccionarWC.BackColor = RGB(255, 172, 172)
+        txtNotSelectedWC.Caption = "No se ha seleccionado"
+    Else
+        btnSeleccionarWC.BackColor = RGB(171, 255, 174)
+        txtNotSelectedWC.Caption = ""
+    End If
+    
+    If Len(PathFlex) = 0 Or PathFlex = "False" Then
+        btnSeleccionarFlex.BackColor = RGB(255, 172, 172)
+        txtNotSelectedFX.Caption = "No se ha seleccionado"
+    Else
+        btnSeleccionarFlex.BackColor = RGB(171, 255, 174)
+        txtNotSelectedFX.Caption = ""
+    End If
+    
+    If Len(PathVariance) = 0 Or PathVariance = "False" Then
+        btnSeleccionarVariance.BackColor = RGB(255, 172, 172)
+        txtNotSelectedVariance.Caption = "No se ha seleccionado"
+    Else
+        btnSeleccionarVariance.BackColor = RGB(171, 255, 174)
+        txtNotSelectedVariance.Caption = ""
+    End If
+End Sub
+

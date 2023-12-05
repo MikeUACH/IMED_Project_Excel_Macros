@@ -1,6 +1,6 @@
 Attribute VB_Name = "Module3"
 Dim archivoOrigenPath As String
-Sub UpdWCellTabBU(ByVal ArchivoDestinoPath As String)
+Sub UpdWCellTabBU(ByVal archivoOrigenPath As String, ByVal ArchivoDestinoPath As String)
     Dim ArchivoDestino As Workbook
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
@@ -8,16 +8,6 @@ Sub UpdWCellTabBU(ByVal ArchivoDestinoPath As String)
     Dim celdaInicio As Range
     Dim rangoDatos As Range
     Dim filaInicio As Long
-    
-        ' Verifica si ya se ha seleccionado un archivo previamente
-    If archivoOrigenPath = "" Then
-        ' Abre el cuadro de di�logo de selecci�n de archivo
-        archivoOrigenPath = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo de origen(WC Staff IMED)")
-        ' Verifica si se seleccion� un archivo
-        If archivoOrigenPath = "Falso" Then
-            Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
-        End If
-    End If
     
     ' Usa el archivo seleeccionado como ArchivoDestino
     Set archivoOrigen = Workbooks.Open(archivoOrigenPath)
