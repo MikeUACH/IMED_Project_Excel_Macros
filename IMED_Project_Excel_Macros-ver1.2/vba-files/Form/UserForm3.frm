@@ -13,6 +13,8 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
+
 Dim PathBU As String
 Dim PathDL As String
 Dim PathWC As String
@@ -79,7 +81,7 @@ End Sub
 Private Sub btnSeleccionarVariance_Click()
     If PathVariance = "" Or PathVariance = "False" Then
         ' Abre el cuadro de di�logo de selecci�n de archivo
-        PathVariance = Application.GetOpenFilename("Archivos Excel (*.xlsm), *.xlsm", , "Selecciona el archivo Variance BID")
+        PathVariance = Application.GetOpenFilename("Archivos Excel (*.xlsx), *.xlsx", , "Selecciona el archivo Variance BID")
         ' Verifica si se seleccion� un archivo
         If PathVariance = "False" Then
             Exit Sub ' Si no se seleccion� un archivo, sale del procedimiento
@@ -91,21 +93,50 @@ Private Sub btnSeleccionarVariance_Click()
 End Sub
     
 Private Sub btnActualizar_Click()
-    ' Hacer un If para verificar que se han seleccionado los archivos necesarios
-    UpdWCstaffShiftTabsBU PathDL, PathBU  ' Llama al m�dulo 1
-    UpdNonMatMarginBU PathFlex, PathBU    ' Llama al m�dulo 2
-    UpdWCellTabBU PathWC, PathBU   ' Llama al m�dulo 3
-    ActualizarPercentageTABFlexline PathBU, PathFlex ' Llama al m�dulo 6
-    ActualizarTABRateCalcFlex PathBU, PathFlex  ' Llama al m�dulo 7
-    
-    
-    Dim wsRegistro As Worksheet
-    Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
-    Dim lastRow As Long
-    lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-    wsRegistro.Cells(lastRow, 1).Value = Now
-    wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en archivos BU y Flexline"
-    wsRegistro.Columns("A:B").AutoFit
+    Dim wsUbicaciones As Worksheet
+    Set wsUbicaciones = ThisWorkbook.Sheets("UbicacionesGuardadas")
+
+    ' Verificar si las ubicaciones no están vacías
+    If Len(wsUbicaciones.Range("B3").Value) > 0 Then
+        ' Hacer un If para verificar que se han seleccionado los archivos necesarios
+        UpdWCstaffShiftTabsBU wsUbicaciones.Range("B4").Value, wsUbicaciones.Range("B3").Value  ' Llama al mï¿½dulo 1
+        UpdNonMatMarginBU wsUbicaciones.Range("B6").Value, wsUbicaciones.Range("B3").Value    ' Llama al mï¿½dulo 2
+        UpdWCellTabBU wsUbicaciones.Range("B5").Value, wsUbicaciones.Range("B3").Value   ' Llama al mï¿½dulo 3
+        ActualizarPercentageTABFlexline wsUbicaciones.Range("B3").Value, wsUbicaciones.Range("B6").Value ' Llama al mï¿½dulo 6
+        ActualizarTABRateCalcFlex wsUbicaciones.Range("B3").Value, wsUbicaciones.Range("B6").Value  ' Llama al mï¿½dulo 7
+
+        Dim wsRegistro As Worksheet
+        Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+        Dim lastRow As Long
+        lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+        wsRegistro.Cells(lastRow, 1).Value = Now
+        wsRegistro.Cells(lastRow, 2).Value = "Acciï¿½n realizada en archivos BU y Flexline"
+        wsRegistro.Columns("A:B").AutoFit
+    Else
+        ' Verificar si las ubicaciones de los botones están vacías
+        If Len(PathBU) = 0 Or Len(PathDL) = 0 Or Len(PathWC) = 0 Or Len(PathFlex) = 0 Or Len(PathVariance) = 0 Then
+            MsgBox "Por favor, selecciona todas las ubicaciones antes de actualizar.", vbExclamation, "Advertencia"
+            Exit Sub
+        End If
+        If Len(PathBU) > 0 Or Len(PathDL) > 0 Or Len(PathWC) > 0 Or Len(PathFlex) > 0 Or Len(PathVariance) > 0 Then
+            ' Si las ubicaciones no están especificadas, mostrar un MsgBox con botones Sí y No
+            Dim respuesta As VbMsgBoxResult
+            respuesta = MsgBox("Warning. Se usarán las ubicaciones proporcionadas por los botones. ¿Deseas continuar?", vbYesNo + vbExclamation, "Advertencia")
+
+            ' Verificar la respuesta del usuario
+            If respuesta = vbYes Then
+                ' El usuario ha hecho clic en Sí, proceder con la operación
+                UpdWCstaffShiftTabsBU PathDL, PathBU  ' Llama al m?dulo 1
+                UpdNonMatMarginBU PathFlex, PathBU    ' Llama al m?dulo 2
+                UpdWCellTabBU PathWC, PathBU   ' Llama al m?dulo 3
+                ActualizarPercentageTABFlexline PathBU, PathFlex ' Llama al m?dulo 6
+                ActualizarTABRateCalcFlex PathBU, PathFlex  ' Llama al m?dulo 7
+            Else
+                ' El usuario ha hecho clic en No, no hacer nada
+                MsgBox "Operación cancelada."
+            End If
+        End If
+    End If
 End Sub
 
 Private Sub btnGenerarReporte_Click()
@@ -122,7 +153,7 @@ Private Sub btnBorrarUbicacionBU_Click()
 
         If comprobarBU = True Then
             PathBU = ""
-            MsgBox "Se ha borrado con éxito"
+            MsgBox "Se ha borrado con �xito"
             ActualizarEstadoBoton
         End If
 
@@ -130,7 +161,7 @@ Private Sub btnBorrarUbicacionBU_Click()
     End If
 
     If Len(PathBU) = 0 And comprobarBU = False Then
-        MsgBox "No hay ningÃºn archivo seleccionado"
+        MsgBox "No hay ning�n archivo seleccionado"
     End If
 End Sub
 
@@ -144,7 +175,7 @@ Private Sub btnBorrarUbicacionDL_Click()
 
         If comprobarDL = True Then
             PathDL = ""
-            MsgBox "Se ha borrado con éxito"
+            MsgBox "Se ha borrado con �xito"
             ActualizarEstadoBoton
         End If
 
@@ -152,7 +183,7 @@ Private Sub btnBorrarUbicacionDL_Click()
     End If
 
     If Len(PathDL) = 0 And comprobarDL = False Then
-        MsgBox "No hay ningÃºn archivo seleccionado"
+        MsgBox "No hay ning�n archivo seleccionado"
     End If
 End Sub
 
@@ -166,7 +197,7 @@ Private Sub btnBorrarUbicacionWC_Click()
 
         If comprobarWC = True Then
             PathWC = ""
-            MsgBox "Se ha borrado con éxito"
+            MsgBox "Se ha borrado con �xito"
             ActualizarEstadoBoton
         End If
 
@@ -174,7 +205,7 @@ Private Sub btnBorrarUbicacionWC_Click()
     End If
 
     If Len(PathWC) = 0 And comprobarWC = False Then
-        MsgBox "No hay ningÃºn archivo seleccionado"
+        MsgBox "No hay ning�n archivo seleccionado"
     End If
 End Sub
 
@@ -188,7 +219,7 @@ Private Sub btnBorrarUbicacionFlex_Click()
 
         If comprobarFlex = True Then
             PathFlex = ""
-            MsgBox "Se ha borrado con éxito"
+            MsgBox "Se ha borrado con �xito"
             ActualizarEstadoBoton
         End If
 
@@ -196,7 +227,7 @@ Private Sub btnBorrarUbicacionFlex_Click()
     End If
 
     If Len(PathFlex) = 0 And comprobarFlex = False Then
-        MsgBox "No hay ningÃºn archivo seleccionado"
+        MsgBox "No hay ning�n archivo seleccionado"
     End If
 End Sub
 
@@ -210,7 +241,7 @@ Private Sub btnBorrarUbicacionVariance_Click()
 
         If comprobarVariance = True Then
             PathVariance = ""
-            MsgBox "Se ha borrado con éxito"
+            MsgBox "Se ha borrado con �xito"
             ActualizarEstadoBoton
         End If
 
@@ -218,10 +249,63 @@ Private Sub btnBorrarUbicacionVariance_Click()
     End If
 
     If Len(PathVariance) = 0 And comprobarVariance = False Then
-        MsgBox "No hay ningÃºn archivo seleccionado"
+        MsgBox "No hay ning�n archivo seleccionado"
     End If
 End Sub
 
+Private Sub btnGuardarUbicaciones_Click()
+    Dim ubicacionesGuardadas As String
+    Dim wsUbicaciones As Worksheet
+    Set wsUbicaciones = ThisWorkbook.Sheets("UbicacionesGuardadas")
+
+    If Len(PathBU) > 0 Then
+        ThisWorkbook.Sheets("UbicacionesGuardadas").Range("B3").Value = PathBU
+        ubicacionesGuardadas = ubicacionesGuardadas & "BU, "
+        wsUbicaciones.Range("B3").Interior.Color = RGB(171, 255, 174) ' Verde
+    Else
+        wsUbicaciones.Range("B3").Interior.Color = RGB(255, 172, 172) ' Rojo
+    End If
+
+    If Len(PathDL) > 0 Then
+        ThisWorkbook.Sheets("UbicacionesGuardadas").Range("B4").Value = PathDL
+        ubicacionesGuardadas = ubicacionesGuardadas & "DL, "
+        wsUbicaciones.Range("B4").Interior.Color = RGB(171, 255, 174) ' Verde
+    Else
+        wsUbicaciones.Range("B4").Interior.Color = RGB(255, 172, 172) ' Rojo
+    End If
+
+    If Len(PathWC) > 0 Then
+        ThisWorkbook.Sheets("UbicacionesGuardadas").Range("B5").Value = PathWC
+        ubicacionesGuardadas = ubicacionesGuardadas & "WC, "
+        wsUbicaciones.Range("B5").Interior.Color = RGB(171, 255, 174) ' Verde
+    Else
+        wsUbicaciones.Range("B5").Interior.Color = RGB(255, 172, 172) ' Rojo
+    End If
+
+    If Len(PathFlex) > 0 Then
+        ThisWorkbook.Sheets("UbicacionesGuardadas").Range("B6").Value = PathFlex
+        ubicacionesGuardadas = ubicacionesGuardadas & "Flex, "
+        wsUbicaciones.Range("B6").Interior.Color = RGB(171, 255, 174) ' Verde
+    Else
+        wsUbicaciones.Range("B6").Interior.Color = RGB(255, 172, 172) ' Rojo
+    End If
+
+    If Len(PathVariance) > 0 Then
+        ThisWorkbook.Sheets("UbicacionesGuardadas").Range("B7").Value = PathVariance
+        ubicacionesGuardadas = ubicacionesGuardadas & "Variance, "
+        wsUbicaciones.Range("B7").Interior.Color = RGB(171, 255, 174) ' Verde
+    Else
+        wsUbicaciones.Range("B7").Interior.Color = RGB(255, 172, 172) ' Rojo
+    End If
+
+    If Len(ubicacionesGuardadas) > 0 Then
+        MsgBox "Ubicaciones guardadas con éxito: " & Left(ubicacionesGuardadas, Len(ubicacionesGuardadas) - 2)
+    Else
+        MsgBox "No hay ubicaciones para guardar"
+    End If
+    ThisWorkbook.Sheets("UbicacionesGuardadas").Columns("B").AutoFit
+End Sub
+    
 Private Sub ActualizarEstadoBoton()
     If Len(PathBU) = 0 Or PathBU = "False" Then
         btnSeleccionarBU.BackColor = RGB(255, 172, 172)
