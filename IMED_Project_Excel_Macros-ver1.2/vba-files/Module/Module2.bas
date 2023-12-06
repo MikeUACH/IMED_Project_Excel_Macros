@@ -1,7 +1,7 @@
 Attribute VB_Name = "Module2"
 Dim archivoOrigenPath As String
 
-Sub UpdNonMatMarginBU(ByVal ArchivoDestinoPath As String, ByVal archivoOrigenPath As String)
+Sub UpdNonMatMarginBU(ByVal archivoOrigenPath As String, ByVal ArchivoDestinoPath As String)
     Dim ArchivoDestino As Workbook
     Dim TotalFlexline As Variant
     Dim hojaOrigen As Worksheet
