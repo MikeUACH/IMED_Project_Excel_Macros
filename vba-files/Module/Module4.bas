@@ -2,7 +2,7 @@ Attribute VB_Name = "Module4"
 Dim archivoOrigenPath As String ' Variable global para almacenar la ruta del archivo origen
 Dim ArchivoDestinoPath As String
 
-Sub RealizarOperaciones()
+Sub Inutil()
     Dim archivoOrigen As Workbook
     Dim hojaOrigen As Worksheet
     Dim hojaDestino As Worksheet
