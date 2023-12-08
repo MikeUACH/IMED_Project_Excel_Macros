@@ -136,51 +136,49 @@ Private Sub btnActualizar_Click()
     Dim wsUbicaciones As Worksheet
     Set wsUbicaciones = ThisWorkbook.Sheets("UbicacionesGuardadas")
 
-    ' Verificar si las ubicaciones no están vacías
-    If Len(wsUbicaciones.Range("B3").Value) > 0 Or Len(wsUbicaciones.Range("B4").Value) > 0 Or Len(wsUbicaciones.Range("B5").Value) > 0 Or Len(wsUbicaciones.Range("B6").Value) > 0 Or Len(wsUbicaciones.Range("B7").Value) > 0 Then
-        Dim respuestaUbicaciones As VbMsgBoxResult
-        respuestaUbicaciones = MsgBox("Warning. Se usar�n las ubicaciones proporcionadas por la hoja UbicacionesGuardadas. �Deseas continuar?", vbYesNo + vbExclamation, "Advertencia")
-        If respuestaUbicaciones = vbYes Then
-            ' Hacer un If para verificar que se han seleccionado los archivos necesarios
-            UpdWCstaffShiftTabsBU wsUbicaciones.Range("B4").Value, wsUbicaciones.Range("B3").Value  ' Llama al mï¿½dulo 1
-            UpdNonMatMarginBU wsUbicaciones.Range("B6").Value, wsUbicaciones.Range("B3").Value    ' Llama al mï¿½dulo 2
-            UpdWCellTabBU wsUbicaciones.Range("B5").Value, wsUbicaciones.Range("B3").Value   ' Llama al mï¿½dulo 3
-            ActualizarPercentageTABFlexline wsUbicaciones.Range("B3").Value, wsUbicaciones.Range("B6").Value ' Llama al mï¿½dulo 6
-            ActualizarTABRateCalcFlex wsUbicaciones.Range("B3").Value, wsUbicaciones.Range("B6").Value  ' Llama al mï¿½dulo 7
-        
-            Dim wsRegistro As Worksheet
-            Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
-            Dim lastRow As Long
-            lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
-            wsRegistro.Cells(lastRow, 1).Value = Now
-            wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en archivos BU y Flexline"
-            wsRegistro.Columns("A:B").AutoFit
-        Else
-            MsgBox "Operaci�n cancelada."
+    respuestaUbisEspecificas = MsgBox("¿Quieres usar las ubicaciones guardadas en la hoja 'UbicacionesGuardadas'?", vbYesNo + vbExclamation, "Advertencia")
+    If respuestaUbisEspecificas = vbYes Then 
+        ' Verificar si las ubicaciones no están vacías
+        If (Len(wsUbicaciones.Range("B3").Value) > 0 Or Len(wsUbicaciones.Range("B4").Value) > 0 Or Len(wsUbicaciones.Range("B5").Value) > 0 Or Len(wsUbicaciones.Range("B6").Value) > 0 Or Len(wsUbicaciones.Range("B7").Value) > 0) And usarUbicacionesEspecificas= False Then
+            Dim respuestaUbicaciones As VbMsgBoxResult
+            respuestaUbicaciones = MsgBox("Se usar�n las ubicaciones proporcionadas por la hoja 'UbicacionesGuardadas'. �Deseas continuar?", vbYesNo + vbExclamation, "Advertencia")
+            If respuestaUbicaciones = vbYes Then
+                ' Hacer un If para verificar que se han seleccionado los archivos necesarios
+                UpdWCstaffShiftTabsBU wsUbicaciones.Range("B4").Value, wsUbicaciones.Range("B3").Value  ' Llama al mï¿½dulo 1
+                UpdNonMatMarginBU wsUbicaciones.Range("B6").Value, wsUbicaciones.Range("B3").Value    ' Llama al mï¿½dulo 2
+                UpdWCellTabBU wsUbicaciones.Range("B5").Value, wsUbicaciones.Range("B3").Value   ' Llama al mï¿½dulo 3
+                ActualizarPercentageTABFlexline wsUbicaciones.Range("B3").Value, wsUbicaciones.Range("B6").Value ' Llama al mï¿½dulo 6
+                ActualizarTABRateCalcFlex wsUbicaciones.Range("B3").Value, wsUbicaciones.Range("B6").Value  ' Llama al mï¿½dulo 7
+            
+                Dim wsRegistro As Worksheet
+                Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
+                Dim lastRow As Long
+                lastRow = wsRegistro.Cells(wsRegistro.Rows.Count, "A").End(xlUp).Row + 1
+                wsRegistro.Cells(lastRow, 1).Value = Now
+                wsRegistro.Cells(lastRow, 2).Value = "Acci�n realizada en archivos BU y Flexline"
+                wsRegistro.Columns("A:B").AutoFit
+            Else
+                MsgBox "Operaci�n cancelada."
+            End If
         End If
-    Else
-        ' Verificar si las ubicaciones de los botones están vacías
-        If Len(PathBU) = 0 Or Len(PathDL) = 0 Or Len(PathWC) = 0 Or Len(PathFlex) = 0 Or Len(PathVariance) = 0 Then
-            MsgBox "Por favor, selecciona todas las ubicaciones antes de actualizar.", vbExclamation, "Advertencia"
-            Exit Sub
-        End If
-        If Len(PathBU) > 0 Or Len(PathDL) > 0 Or Len(PathWC) > 0 Or Len(PathFlex) > 0 Or Len(PathVariance) > 0 Then
-            ' Si las ubicaciones no están especificadas, mostrar un MsgBox con botones Sí y No
-            Dim respuesta As VbMsgBoxResult
-            respuesta = MsgBox("Warning. Se usar�n las ubicaciones proporcionadas por los botones. �Deseas continuar?", vbYesNo + vbExclamation, "Advertencia")
-
-            ' Verificar la respuesta del usuario
-            If respuesta = vbYes Then
+    Else 
+        respuestaUbisHojas = MsgBox("Se usaran las ubicaciones proporcionadas en los botones. ¿Deseas continuar?", vbYesNo + vbExclamation, "Advertencia")
+        If respuestaUbisHojas = vbYes Then 
+            ' Verificar si las ubicaciones de los botones están vacías
+            If Len(PathBU) = 0 Or Len(PathDL) = 0 Or Len(PathWC) = 0 Or Len(PathFlex) = 0 Or Len(PathVariance) = 0 Then
+                MsgBox "Por favor, selecciona todas las ubicaciones en los botones antes de actualizar.", vbExclamation, "Advertencia"
+                Exit Sub
+            End If
+            If Len(PathBU) > 0 Or Len(PathDL) > 0 Or Len(PathWC) > 0 Or Len(PathFlex) > 0 Or Len(PathVariance) > 0 Then
                 ' El usuario ha hecho clic en Sí, proceder con la operación
                 UpdWCstaffShiftTabsBU PathDL, PathBU  ' Llama al m?dulo 1
                 UpdNonMatMarginBU PathFlex, PathBU    ' Llama al m?dulo 2
                 UpdWCellTabBU PathWC, PathBU   ' Llama al m?dulo 3
                 ActualizarPercentageTABFlexline PathBU, PathFlex ' Llama al m?dulo 6
                 ActualizarTABRateCalcFlex PathBU, PathFlex  ' Llama al m?dulo 7
-            Else
-                ' El usuario ha hecho clic en No, no hacer nada
-                MsgBox "Operaci�n cancelada."
             End If
+        Else 
+            MsgBox "Operaci�n cancelada."
         End If
     End If
 End Sub
