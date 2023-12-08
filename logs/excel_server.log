@@ -2400,3 +2400,153 @@
 08/12/2023 08:45:02 a. m. - DEBUG:CLASS IMPORTED: Xdebug FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\Xdebug.cls
 08/12/2023 08:45:02 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\images
 08/12/2023 08:45:04 a. m. - Error:Error inAutoloadModules
+08/12/2023 11:23:48 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files
+08/12/2023 11:23:48 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class
+08/12/2023 11:23:48 a. m. - DEBUG:CLASS UPDATED: Sheet1 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet1.cls
+08/12/2023 11:23:48 a. m. - DEBUG:CLASS UPDATED: Sheet11 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet11.cls
+08/12/2023 11:23:48 a. m. - DEBUG:CLASS UPDATED: Sheet2 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet2.cls
+08/12/2023 11:23:48 a. m. - DEBUG:CLASS UPDATED: Sheet3 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet3.cls
+08/12/2023 11:23:48 a. m. - DEBUG:CLASS UPDATED: Sheet9 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet9.cls
+08/12/2023 11:23:48 a. m. - DEBUG:CLASS UPDATED: ThisWorkbook FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\ThisWorkbook.cls
+08/12/2023 11:23:48 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form
+08/12/2023 11:23:48 a. m. - DEBUG:FORM IMPORTED: UserForm3.frm FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form\UserForm3.frm TO EXCEL
+08/12/2023 11:23:48 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module
+08/12/2023 11:23:49 a. m. - DEBUG:MODULE IMPORTED: Module1.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module1.bas TO EXCEL
+08/12/2023 11:23:49 a. m. - DEBUG:MODULE IMPORTED: Module2.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module2.bas TO EXCEL
+08/12/2023 11:23:49 a. m. - DEBUG:MODULE IMPORTED: Module3.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module3.bas TO EXCEL
+08/12/2023 11:23:49 a. m. - DEBUG:MODULE IMPORTED: Module4.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module4.bas TO EXCEL
+08/12/2023 11:23:49 a. m. - DEBUG:MODULE IMPORTED: Module5.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module5.bas TO EXCEL
+08/12/2023 11:23:49 a. m. - DEBUG:MODULE IMPORTED: Module6.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module6.bas TO EXCEL
+08/12/2023 11:23:49 a. m. - DEBUG:MODULE IMPORTED: Module7.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module7.bas TO EXCEL
+08/12/2023 11:23:49 a. m. - DEBUG:MODULE IMPORTED: Module8.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module8.bas TO EXCEL
+08/12/2023 11:23:49 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules
+08/12/2023 11:23:49 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\excel-types
+08/12/2023 11:23:49 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug
+08/12/2023 11:23:49 a. m. - DEBUG:CLASS IMPORTED: Xdebug FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\Xdebug.cls
+08/12/2023 11:23:49 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\images
+08/12/2023 11:23:50 a. m. - Error:Error inAutoloadModules
+08/12/2023 11:31:32 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files
+08/12/2023 11:31:32 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class
+08/12/2023 11:31:32 a. m. - DEBUG:CLASS UPDATED: Sheet1 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet1.cls
+08/12/2023 11:31:32 a. m. - DEBUG:CLASS UPDATED: Sheet11 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet11.cls
+08/12/2023 11:31:32 a. m. - DEBUG:CLASS UPDATED: Sheet2 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet2.cls
+08/12/2023 11:31:32 a. m. - DEBUG:CLASS UPDATED: Sheet3 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet3.cls
+08/12/2023 11:31:32 a. m. - DEBUG:CLASS UPDATED: Sheet9 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet9.cls
+08/12/2023 11:31:32 a. m. - DEBUG:CLASS UPDATED: ThisWorkbook FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\ThisWorkbook.cls
+08/12/2023 11:31:32 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form
+08/12/2023 11:31:32 a. m. - DEBUG:FORM IMPORTED: UserForm3.frm FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form\UserForm3.frm TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module
+08/12/2023 11:31:32 a. m. - DEBUG:MODULE IMPORTED: Module1.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module1.bas TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:MODULE IMPORTED: Module2.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module2.bas TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:MODULE IMPORTED: Module3.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module3.bas TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:MODULE IMPORTED: Module4.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module4.bas TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:MODULE IMPORTED: Module5.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module5.bas TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:MODULE IMPORTED: Module6.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module6.bas TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:MODULE IMPORTED: Module7.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module7.bas TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:MODULE IMPORTED: Module8.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module8.bas TO EXCEL
+08/12/2023 11:31:32 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules
+08/12/2023 11:31:32 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\excel-types
+08/12/2023 11:31:32 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug
+08/12/2023 11:31:32 a. m. - DEBUG:CLASS IMPORTED: Xdebug FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\Xdebug.cls
+08/12/2023 11:31:32 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\images
+08/12/2023 11:31:33 a. m. - Error:Error inAutoloadModules
+08/12/2023 11:35:59 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files
+08/12/2023 11:35:59 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class
+08/12/2023 11:35:59 a. m. - DEBUG:CLASS UPDATED: Sheet1 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet1.cls
+08/12/2023 11:35:59 a. m. - DEBUG:CLASS UPDATED: Sheet11 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet11.cls
+08/12/2023 11:35:59 a. m. - DEBUG:CLASS UPDATED: Sheet2 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet2.cls
+08/12/2023 11:35:59 a. m. - DEBUG:CLASS UPDATED: Sheet3 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet3.cls
+08/12/2023 11:35:59 a. m. - DEBUG:CLASS UPDATED: Sheet9 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet9.cls
+08/12/2023 11:35:59 a. m. - DEBUG:CLASS UPDATED: ThisWorkbook FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\ThisWorkbook.cls
+08/12/2023 11:35:59 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form
+08/12/2023 11:35:59 a. m. - DEBUG:FORM IMPORTED: UserForm3.frm FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form\UserForm3.frm TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module
+08/12/2023 11:35:59 a. m. - DEBUG:MODULE IMPORTED: Module1.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module1.bas TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:MODULE IMPORTED: Module2.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module2.bas TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:MODULE IMPORTED: Module3.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module3.bas TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:MODULE IMPORTED: Module4.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module4.bas TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:MODULE IMPORTED: Module5.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module5.bas TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:MODULE IMPORTED: Module6.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module6.bas TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:MODULE IMPORTED: Module7.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module7.bas TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:MODULE IMPORTED: Module8.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module8.bas TO EXCEL
+08/12/2023 11:35:59 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules
+08/12/2023 11:35:59 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\excel-types
+08/12/2023 11:35:59 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug
+08/12/2023 11:35:59 a. m. - DEBUG:CLASS IMPORTED: Xdebug FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\Xdebug.cls
+08/12/2023 11:35:59 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\images
+08/12/2023 11:36:01 a. m. - Error:Error inAutoloadModules
+08/12/2023 11:42:56 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files
+08/12/2023 11:42:56 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class
+08/12/2023 11:42:56 a. m. - DEBUG:CLASS UPDATED: Sheet1 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet1.cls
+08/12/2023 11:42:56 a. m. - DEBUG:CLASS UPDATED: Sheet11 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet11.cls
+08/12/2023 11:42:56 a. m. - DEBUG:CLASS UPDATED: Sheet2 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet2.cls
+08/12/2023 11:42:56 a. m. - DEBUG:CLASS UPDATED: Sheet3 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet3.cls
+08/12/2023 11:42:56 a. m. - DEBUG:CLASS UPDATED: Sheet9 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet9.cls
+08/12/2023 11:42:56 a. m. - DEBUG:CLASS UPDATED: ThisWorkbook FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\ThisWorkbook.cls
+08/12/2023 11:42:56 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form
+08/12/2023 11:42:56 a. m. - DEBUG:FORM IMPORTED: UserForm3.frm FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form\UserForm3.frm TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module
+08/12/2023 11:42:56 a. m. - DEBUG:MODULE IMPORTED: Module1.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module1.bas TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:MODULE IMPORTED: Module2.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module2.bas TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:MODULE IMPORTED: Module3.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module3.bas TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:MODULE IMPORTED: Module4.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module4.bas TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:MODULE IMPORTED: Module5.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module5.bas TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:MODULE IMPORTED: Module6.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module6.bas TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:MODULE IMPORTED: Module7.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module7.bas TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:MODULE IMPORTED: Module8.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module8.bas TO EXCEL
+08/12/2023 11:42:56 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules
+08/12/2023 11:42:56 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\excel-types
+08/12/2023 11:42:56 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug
+08/12/2023 11:42:56 a. m. - DEBUG:CLASS IMPORTED: Xdebug FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\Xdebug.cls
+08/12/2023 11:42:56 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\images
+08/12/2023 11:42:57 a. m. - Error:Error inAutoloadModules
+08/12/2023 11:57:57 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files
+08/12/2023 11:57:57 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class
+08/12/2023 11:57:57 a. m. - DEBUG:CLASS UPDATED: Sheet1 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet1.cls
+08/12/2023 11:57:58 a. m. - DEBUG:CLASS UPDATED: Sheet11 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet11.cls
+08/12/2023 11:57:58 a. m. - DEBUG:CLASS UPDATED: Sheet2 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet2.cls
+08/12/2023 11:57:58 a. m. - DEBUG:CLASS UPDATED: Sheet3 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet3.cls
+08/12/2023 11:57:58 a. m. - DEBUG:CLASS UPDATED: Sheet9 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet9.cls
+08/12/2023 11:57:58 a. m. - DEBUG:CLASS UPDATED: ThisWorkbook FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\ThisWorkbook.cls
+08/12/2023 11:57:58 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form
+08/12/2023 11:57:58 a. m. - DEBUG:FORM IMPORTED: UserForm3.frm FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form\UserForm3.frm TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module
+08/12/2023 11:57:58 a. m. - DEBUG:MODULE IMPORTED: Module1.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module1.bas TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:MODULE IMPORTED: Module2.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module2.bas TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:MODULE IMPORTED: Module3.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module3.bas TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:MODULE IMPORTED: Module4.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module4.bas TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:MODULE IMPORTED: Module5.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module5.bas TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:MODULE IMPORTED: Module6.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module6.bas TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:MODULE IMPORTED: Module7.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module7.bas TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:MODULE IMPORTED: Module8.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module8.bas TO EXCEL
+08/12/2023 11:57:58 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules
+08/12/2023 11:57:58 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\excel-types
+08/12/2023 11:57:58 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug
+08/12/2023 11:57:58 a. m. - DEBUG:CLASS IMPORTED: Xdebug FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\Xdebug.cls
+08/12/2023 11:57:58 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\images
+08/12/2023 11:58:13 a. m. - Error:Error inAutoloadModules
+08/12/2023 11:58:21 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files
+08/12/2023 11:58:21 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class
+08/12/2023 11:58:22 a. m. - DEBUG:CLASS UPDATED: Sheet1 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet1.cls
+08/12/2023 11:58:22 a. m. - DEBUG:CLASS UPDATED: Sheet11 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet11.cls
+08/12/2023 11:58:22 a. m. - DEBUG:CLASS UPDATED: Sheet2 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet2.cls
+08/12/2023 11:58:22 a. m. - DEBUG:CLASS UPDATED: Sheet3 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet3.cls
+08/12/2023 11:58:22 a. m. - DEBUG:CLASS UPDATED: Sheet9 FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\Sheet9.cls
+08/12/2023 11:58:22 a. m. - DEBUG:CLASS UPDATED: ThisWorkbook FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Class\ThisWorkbook.cls
+08/12/2023 11:58:22 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form
+08/12/2023 11:58:22 a. m. - DEBUG:FORM IMPORTED: UserForm3.frm FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Form\UserForm3.frm TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module
+08/12/2023 11:58:22 a. m. - DEBUG:MODULE IMPORTED: Module1.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module1.bas TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:MODULE IMPORTED: Module2.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module2.bas TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:MODULE IMPORTED: Module3.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module3.bas TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:MODULE IMPORTED: Module4.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module4.bas TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:MODULE IMPORTED: Module5.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module5.bas TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:MODULE IMPORTED: Module6.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module6.bas TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:MODULE IMPORTED: Module7.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module7.bas TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:MODULE IMPORTED: Module8.bas FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\vba-files\Module\Module8.bas TO EXCEL
+08/12/2023 11:58:22 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules
+08/12/2023 11:58:22 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\excel-types
+08/12/2023 11:58:22 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug
+08/12/2023 11:58:22 a. m. - DEBUG:CLASS IMPORTED: Xdebug FROM FILE: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\Xdebug.cls
+08/12/2023 11:58:22 a. m. - DEBUG:Importing VBA Files from: C:\Users\3762091\Desktop\trabajo\Proyecto Excel\Excel\Con Macros\IMED_Project_Excel_Macros\xvba_modules\Xdebug\images
+08/12/2023 11:58:24 a. m. - Error:Error inAutoloadModules

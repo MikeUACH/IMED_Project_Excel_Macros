@@ -23,6 +23,7 @@ Dim PathVariance As String
 
 Private Sub UserForm_Initialize()
     ActualizarEstadoBoton
+    ListViewBU.OLEDropMode = ccOLEDropManual
 End Sub ' Hacer un If que haga que seleccione archivo con nombre similar
 
 Private Sub btnSeleccionarBU_Click()
@@ -139,7 +140,7 @@ Private Sub btnActualizar_Click()
     respuestaUbisEspecificas = MsgBox("¿Quieres usar las ubicaciones guardadas en la hoja 'UbicacionesGuardadas'?", vbYesNo + vbExclamation, "Advertencia")
     If respuestaUbisEspecificas = vbYes Then 
         ' Verificar si las ubicaciones no están vacías
-        If (Len(wsUbicaciones.Range("B3").Value) > 0 Or Len(wsUbicaciones.Range("B4").Value) > 0 Or Len(wsUbicaciones.Range("B5").Value) > 0 Or Len(wsUbicaciones.Range("B6").Value) > 0 Or Len(wsUbicaciones.Range("B7").Value) > 0) And usarUbicacionesEspecificas= False Then
+        If (Len(wsUbicaciones.Range("B3").Value) > 0 Or Len(wsUbicaciones.Range("B4").Value) > 0 Or Len(wsUbicaciones.Range("B5").Value) > 0 Or Len(wsUbicaciones.Range("B6").Value) > 0 Or Len(wsUbicaciones.Range("B7").Value) > 0) And usarUbicacionesEspecificas = False Then
             Dim respuestaUbicaciones As VbMsgBoxResult
             respuestaUbicaciones = MsgBox("Se usar�n las ubicaciones proporcionadas por la hoja 'UbicacionesGuardadas'. �Deseas continuar?", vbYesNo + vbExclamation, "Advertencia")
             If respuestaUbicaciones = vbYes Then
