@@ -23,7 +23,6 @@ Dim PathVariance As String
 
 Private Sub UserForm_Initialize()
     ActualizarEstadoBoton
-    ListViewBU.OLEDropMode = ccOLEDropManual
 End Sub ' Hacer un If que haga que seleccione archivo con nombre similar
 
 Private Sub btnSeleccionarBU_Click()
@@ -138,7 +137,7 @@ Private Sub btnActualizar_Click()
     Set wsUbicaciones = ThisWorkbook.Sheets("UbicacionesGuardadas")
 
     respuestaUbisEspecificas = MsgBox("¿Quieres usar las ubicaciones guardadas en la hoja 'UbicacionesGuardadas'?", vbYesNo + vbExclamation, "Advertencia")
-    If respuestaUbisEspecificas = vbYes Then 
+    If respuestaUbisEspecificas = vbYes Then
         ' Verificar si las ubicaciones no están vacías
         If (Len(wsUbicaciones.Range("B3").Value) > 0 Or Len(wsUbicaciones.Range("B4").Value) > 0 Or Len(wsUbicaciones.Range("B5").Value) > 0 Or Len(wsUbicaciones.Range("B6").Value) > 0 Or Len(wsUbicaciones.Range("B7").Value) > 0) And usarUbicacionesEspecificas = False Then
             Dim respuestaUbicaciones As VbMsgBoxResult
@@ -146,11 +145,10 @@ Private Sub btnActualizar_Click()
             If respuestaUbicaciones = vbYes Then
                 ' Hacer un If para verificar que se han seleccionado los archivos necesarios
                 UpdWCstaffShiftTabsBU wsUbicaciones.Range("B4").Value, wsUbicaciones.Range("B3").Value  ' Llama al mï¿½dulo 1
-                UpdNonMatMarginBU wsUbicaciones.Range("B6").Value, wsUbicaciones.Range("B3").Value    ' Llama al mï¿½dulo 2
                 UpdWCellTabBU wsUbicaciones.Range("B5").Value, wsUbicaciones.Range("B3").Value   ' Llama al mï¿½dulo 3
                 ActualizarPercentageTABFlexline wsUbicaciones.Range("B3").Value, wsUbicaciones.Range("B6").Value ' Llama al mï¿½dulo 6
                 ActualizarTABRateCalcFlex wsUbicaciones.Range("B3").Value, wsUbicaciones.Range("B6").Value  ' Llama al mï¿½dulo 7
-            
+                UpdNonMatMarginBU wsUbicaciones.Range("B6").Value, wsUbicaciones.Range("B3").Value    ' Llama al mï¿½dulo 2
                 Dim wsRegistro As Worksheet
                 Set wsRegistro = ThisWorkbook.Sheets("RegistroAcciones")
                 Dim lastRow As Long
@@ -162,9 +160,9 @@ Private Sub btnActualizar_Click()
                 MsgBox "Operaci�n cancelada."
             End If
         End If
-    Else 
+    Else
         respuestaUbisHojas = MsgBox("Se usaran las ubicaciones proporcionadas en los botones. ¿Deseas continuar?", vbYesNo + vbExclamation, "Advertencia")
-        If respuestaUbisHojas = vbYes Then 
+        If respuestaUbisHojas = vbYes Then
             ' Verificar si las ubicaciones de los botones están vacías
             If Len(PathBU) = 0 Or Len(PathDL) = 0 Or Len(PathWC) = 0 Or Len(PathFlex) = 0 Or Len(PathVariance) = 0 Then
                 MsgBox "Por favor, selecciona todas las ubicaciones en los botones antes de actualizar.", vbExclamation, "Advertencia"
@@ -172,13 +170,13 @@ Private Sub btnActualizar_Click()
             End If
             If Len(PathBU) > 0 Or Len(PathDL) > 0 Or Len(PathWC) > 0 Or Len(PathFlex) > 0 Or Len(PathVariance) > 0 Then
                 ' El usuario ha hecho clic en Sí, proceder con la operación
-                UpdWCstaffShiftTabsBU PathDL, PathBU  ' Llama al m?dulo 1
-                UpdNonMatMarginBU PathFlex, PathBU    ' Llama al m?dulo 2
+                UpdWCstaffShiftTabsBU PathDL, PathBU  ' Llama al m?dulo 1  
                 UpdWCellTabBU PathWC, PathBU   ' Llama al m?dulo 3
                 ActualizarPercentageTABFlexline PathBU, PathFlex ' Llama al m?dulo 6
                 ActualizarTABRateCalcFlex PathBU, PathFlex  ' Llama al m?dulo 7
+                UpdNonMatMarginBU PathFlex, PathBU  ' Llama al m?dulo 2
             End If
-        Else 
+        Else
             MsgBox "Operaci�n cancelada."
         End If
     End If
@@ -311,7 +309,7 @@ Private Sub btnGuardarUbicaciones_Click()
     Dim wsUbicaciones As Worksheet
     Set wsUbicaciones = ThisWorkbook.Sheets("UbicacionesGuardadas")
 
-    If Len(PathBU) > 0 Then
+    If Len(PathBU) > 0  Then
         ThisWorkbook.Sheets("UbicacionesGuardadas").Range("B3").Value = PathBU
         ubicacionesGuardadas = ubicacionesGuardadas & "BU, "
     End If
@@ -366,6 +364,10 @@ Private Sub btnGuardarUbicaciones_Click()
         wsUbicaciones.Range("B7").Interior.Color = RGB(255, 172, 172) ' Rojo
     End If
 
+    If ubicacionesGuardadas= "False" Then
+        ubicacionesGuardadas= ""
+    End If
+    
     If Len(ubicacionesGuardadas) > 0 Then
         MsgBox "Ubicaciones guardadas con �xito: " & Left(ubicacionesGuardadas, Len(ubicacionesGuardadas) - 2)
     Else

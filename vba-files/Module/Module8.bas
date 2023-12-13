@@ -34,8 +34,17 @@ Sub ObtenerYColocarTabsUnabFlex(ByVal archivoOrigenPath As String, ByVal Archivo
     AllocationUC = hojaOrigen.Range("D73:O83")
     
     ' Buscar la coincidencia en hojaOrigen
-    AllocationTotal = hojaOrigen.Range("D86:O96")
-    
+    AllocationTotalMERZ = hojaOrigen.Range("D87:O87")
+    AllocationTotalMED = hojaOrigen.Range("D88:O88")
+    AllocationTotalSNN = hojaOrigen.Range("D89:O89")
+    AllocationTotalBSC = hojaOrigen.Range("D90:O90")
+    AllocationTotalDRA = hojaOrigen.Range("D91:O91")
+    AllocationTotalZIM = hojaOrigen.Range("D92:O92")
+    AllocationTotalVAR = hojaOrigen.Range("D93:O93")
+    AllocationTotalBD = hojaOrigen.Range("D94:O94")
+    AllocationTotalCUT = hojaOrigen.Range("D95:O95")
+    AllocationTotalDEX = hojaOrigen.Range("D96:O96")
+
     ' Coloca los valores obtenidos en celdas espec�ficas de tu hoja de c�lculo principal
     hojaDestino.Range("Z3:AK12").Value = TotalFlexlineBID2
     hojaDestino.Range("Z17:AK26").Value = AllocationUCBID2
@@ -43,8 +52,17 @@ Sub ObtenerYColocarTabsUnabFlex(ByVal archivoOrigenPath As String, ByVal Archivo
     ' Coloca los valores obtenidos en celdas espec�ficas de tu hoja de c�lculo principal
     hojaDestino.Range("D3:O12").Value = TotalFlexline
     hojaDestino.Range("D17:O26").Value = AllocationUC
-    hojaDestino.Range("D31:O40").Value = AllocationTotal
-    
+
+
+    hojaDestino.Range("D31:O31").Value = AllocationTotalMERZ
+    hojaDestino.Range("D32:O32").Value = AllocationTotalMED
+    hojaDestino.Range("D33:O33").Value = AllocationTotalSNN
+    hojaDestino.Range("D34:O34").Value = AllocationTotalBSC
+    hojaDestino.Range("D35:O35").Value = AllocationTotalDRA
+    hojaDestino.Range("D36:O36").Value = AllocationTotalZIM
+    hojaDestino.Range("D37:O37").Value = AllocationTotalVAR
+    hojaDestino.Range("D38:O38").Value = AllocationTotalBD
+    hojaDestino.Range("D39:O39").Value = AllocationTotalCUT
 End Sub
 
 
