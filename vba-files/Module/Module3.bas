@@ -36,7 +36,7 @@ Sub UpdWCellTabBU(ByVal archivoOrigenPath As String, ByVal ArchivoDestinoPath As
         ' Copiar los datos al archivo de trabajo actual (ajusta el rango de destino seg�n tus necesidades)
         ArchivoDestino.Sheets("WCStaff Format").Range("B3").Resize(13, 33).Value = rangoDatos.Value
     Else
-        MsgBox "La palabra 'NUEVO Forecast' no se encontr� en la tabla.", vbExclamation
+        MsgBox "La palabra 'NUEVO Forecast' no se encontro en la tabla.", vbExclamation
     End If
     archivoOrigen.Close SaveChanges:=False
 End Sub
